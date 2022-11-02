@@ -78,7 +78,7 @@
       "settings": {
         "show_product_recommendations": true,
         "product_recommendations_heading": "You may also like",
-        "limit": "4",
+        "limit": "3",
         "products_per_row_desktop": "4",
         "products_per_row_mobile": "1",
         "color_scheme": "primary"
