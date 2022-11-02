@@ -1,0 +1,330 @@
+{
+  "sections": {
+    "0bd83930-0d12-471c-9079-81ce8127b4b0": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16648161001710__0bd83930-0d12-471c-9079-81ce8127b4b0-166665223892de3bd6-0": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/gucci-blue-felt.png",
+            "indent_image_left": true,
+            "indent_color_left": "#4606fd",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/Path_14.png",
+            "indent_image_right": false,
+            "indent_color_right": "",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "left",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "template--16648161001710__0bd83930-0d12-471c-9079-81ce8127b4b0-166665223892de3bd6-1": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/gucci-blue-felt.png",
+            "indent_image_left": true,
+            "indent_color_left": "#0038d5",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/Path_14.png",
+            "indent_image_right": false,
+            "indent_color_right": "",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "right",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "template--16648161001710__0bd83930-0d12-471c-9079-81ce8127b4b0-166665223892de3bd6-2": {
+          "type": "slide",
+          "settings": {
+            "indent_image_left": false,
+            "indent_color_left": "",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/Screen_Shot_202.png",
+            "indent_image_right": true,
+            "indent_color_right": "#030303",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "right",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "53f952ea-54c9-4cb1-b003-4e2a6364606f": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/Path_14_1.png",
+            "indent_image_left": false,
+            "indent_color_left": "",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/Screen_Shot_202_2_13176e3f-2cc8-4b2d-908f-1bf4068e28f3.png",
+            "indent_image_right": true,
+            "indent_color_right": "#716252",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "left",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "737d1921-ead6-47df-b63e-4cffbdb2a45b": {
+          "type": "slide",
+          "settings": {
+            "indent_image_left": true,
+            "indent_color_left": "#986734",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/gucci-gold-lame.png",
+            "indent_image_right": false,
+            "indent_color_right": "",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "right",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "3944cd99-ef86-4246-8f70-e9bd03e3a46a": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/2000008978996_9.png",
+            "indent_image_left": false,
+            "indent_color_left": "",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/Screen_Shot_202_3.png",
+            "indent_image_right": true,
+            "indent_color_right": "#38393e",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "left",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "d7605ea5-7312-45ac-b6ad-3ab6c0517c6e": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/L_2000008978965_3b33bea4-c7da-4212-96e5-eff8d2a15f00.png",
+            "indent_image_left": false,
+            "indent_color_left": "",
+            "image_focal_point_left": "object-center",
+            "indent_image_right": true,
+            "indent_color_right": "#ffffff",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "left",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "87443c4a-6c78-4b09-ba92-ff49d5b8b833": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/L_2000008978965_3b33bea4-c7da-4212-96e5-eff8d2a15f00.png",
+            "indent_image_left": false,
+            "indent_color_left": "",
+            "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/L_2000008978965_1_7360dbb2-d766-4231-9477-170282e113ee.png",
+            "indent_image_right": false,
+            "indent_color_right": "",
+            "image_focal_point_right": "object-center",
+            "show_on_mobile": "right",
+            "title": "",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "text_color": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "template--16648161001710__0bd83930-0d12-471c-9079-81ce8127b4b0-166665223892de3bd6-0",
+        "template--16648161001710__0bd83930-0d12-471c-9079-81ce8127b4b0-166665223892de3bd6-1",
+        "template--16648161001710__0bd83930-0d12-471c-9079-81ce8127b4b0-166665223892de3bd6-2",
+        "53f952ea-54c9-4cb1-b003-4e2a6364606f",
+        "737d1921-ead6-47df-b63e-4cffbdb2a45b",
+        "3944cd99-ef86-4246-8f70-e9bd03e3a46a",
+        "d7605ea5-7312-45ac-b6ad-3ab6c0517c6e",
+        "87443c4a-6c78-4b09-ba92-ff49d5b8b833"
+      ],
+      "settings": {
+        "color_scheme": "primary",
+        "height": "full_screen",
+        "heading_size": "text-2xl lg:text-5xl",
+        "auto_rotate": false,
+        "slide_speed": "5000"
+      }
+    },
+    "64cf44de-9249-47f8-aba9-64c528c4a67f": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Path_14_4955beb7-5775-41b7-b977-3bd6917c321d.png",
+        "image_mobile": "shopify:\/\/shop_images\/Path_14_67b31e74-4111-486a-8f37-e5485a97d267.png",
+        "indent_image": false,
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "stack_mobile": false,
+        "title": "gloria",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "<p>(N°003–22)<\/p>",
+        "content_position": "justify-start items-start text-left",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "#",
+        "cta_text": "$800",
+        "cta_style": "button"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Most popular",
+        "text": "Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+        "collection": "frontpage",
+        "grid": 3,
+        "rows": 1,
+        "grid_mobile": "1",
+        "show_view_all": true,
+        "color_scheme": "primary"
+      }
+    },
+    "7220387b-507c-4bfa-9ec0-0ce883020d2b": {
+      "type": "image-with-post",
+      "settings": {
+        "article": "news\/test",
+        "article_position": "right",
+        "article_size": "half",
+        "background_color": "tertiary",
+        "title": "media",
+        "subtitle": "THE LATEST",
+        "richtext": "<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur<\/p>",
+        "text_size": "text-xl",
+        "font": "body",
+        "text_position": "items-start",
+        "color_scheme": "tertiary",
+        "cta_link": "#",
+        "cta_text": "read more",
+        "cta_style": "button"
+      }
+    },
+    "16deb4e3-6b05-4fa8-93d5-65b7f08515b4": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ZZ_Photoshoot_I.png",
+        "image_position": "left",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": false,
+        "background_color": "primary",
+        "subtitle": "about",
+        "title": "",
+        "richtext": "<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius lao<\/p>",
+        "text_size": "text-xl",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-start",
+        "color_scheme": "primary",
+        "cta_link": "#",
+        "cta_text": "read more",
+        "cta_style": "button"
+      }
+    },
+    "d635facd-8659-406b-bd23-18ebbf2706ba": {
+      "type": "image-with-post",
+      "settings": {
+        "article": "news\/test",
+        "article_position": "right",
+        "article_size": "half",
+        "background_color": "secondary",
+        "title": "journal",
+        "subtitle": "journal",
+        "richtext": "<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur<\/p>",
+        "text_size": "text-xl",
+        "font": "body",
+        "text_position": "items-start",
+        "color_scheme": "secondary",
+        "cta_link": "#",
+        "cta_text": "read more",
+        "cta_style": "button"
+      }
+    },
+    "6e1cc38a-2a81-43c9-8973-3427cf3595ae": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "",
+        "blog": "news",
+        "post_limit": 2,
+        "blog_show_images": true,
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_view_all": false,
+        "crop": "1",
+        "color_scheme": "secondary"
+      }
+    },
+    "d3a9bace-0edf-4736-8c2a-f2a3db2f7d37": {
+      "type": "marquee",
+      "settings": {
+        "text": "support ukraine and help donate to children and families",
+        "repeat_text": true,
+        "link": "",
+        "text_size": "text-2xl lg:text-3xl",
+        "font": "heading",
+        "speed": 150,
+        "direction": "",
+        "color_scheme": "tertiary"
+      }
+    }
+  },
+  "order": [
+    "0bd83930-0d12-471c-9079-81ce8127b4b0",
+    "64cf44de-9249-47f8-aba9-64c528c4a67f",
+    "featured-collection",
+    "7220387b-507c-4bfa-9ec0-0ce883020d2b",
+    "16deb4e3-6b05-4fa8-93d5-65b7f08515b4",
+    "d635facd-8659-406b-bd23-18ebbf2706ba",
+    "6e1cc38a-2a81-43c9-8973-3427cf3595ae",
+    "d3a9bace-0edf-4736-8c2a-f2a3db2f7d37"
+  ]
+}
