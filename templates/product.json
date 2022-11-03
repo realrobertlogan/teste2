@@ -35,8 +35,28 @@
         "description": {
           "type": "description",
           "settings": {
-            "enable_collapsible_tabs": false,
+            "enable_collapsible_tabs": true,
             "truncate_description": false
+          }
+        },
+        "6377afc3-8294-4e17-af4c-758cb9af8358": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible tab",
+            "heading_text_style": "body",
+            "content": "",
+            "page": "",
+            "icon": "box"
+          }
+        },
+        "104cf1c0-fa53-4f69-a012-af7edc4f58b9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible tab",
+            "heading_text_style": "body",
+            "content": "",
+            "page": "",
+            "icon": "none"
           }
         }
       },
@@ -46,7 +66,9 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "6377afc3-8294-4e17-af4c-758cb9af8358",
+        "104cf1c0-fa53-4f69-a012-af7edc4f58b9"
       ],
       "settings": {
         "desktop_image_width": "one-half",
