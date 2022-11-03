@@ -22,7 +22,7 @@
   @media (min-width: 1024px) {
     #responsiveImageFeatureTemplate-{{ image.id }} {
       height: {{ desktop_image_height }}vh;
-      width: {{ desktop_image_height | divided_by: height_aspect_ratio }}vh;
+      {% comment %} width: {{ desktop_image_height | divided_by: height_aspect_ratio }}vh; {% endcomment %}
     }
   }
 </style>

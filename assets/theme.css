@@ -1911,6 +1911,10 @@ body {
   background-color: var(--color-scheme-text);
 }
 
+[data-color-scheme=quaternary] .responsive-image-placeholder {
+  background-color: var(--color-scheme-text);
+}
+
 .no-js .responsive-image-placeholder {
   display: none;
 }
@@ -1927,6 +1931,11 @@ body {
 
 [data-color-scheme=tertiary].bg-scheme-background .bg-placeholder-bg,
 [data-color-scheme=tertiary] .bg-scheme-background .bg-placeholder-bg {
+  background-color: var(--color-scheme-text-placeholder);
+}
+
+[data-color-scheme=quaternary].bg-scheme-background .bg-placeholder-bg,
+[data-color-scheme=quaternary] .bg-scheme-background .bg-placeholder-bg {
   background-color: var(--color-scheme-text-placeholder);
 }
 
@@ -2149,6 +2158,11 @@ option {
 [data-color-scheme=tertiary] select.text-scheme-text,
 [data-color-scheme=tertiary] select.text-scheme-text {
   background-image: var(--icon-svg-select-tertiary);
+}
+
+[data-color-scheme=quaternary] select.text-scheme-text,
+[data-color-scheme=quaternary] select.text-scheme-text {
+  background-image: var(--icon-svg-select-quaternary);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -2399,6 +2413,9 @@ button span {
 [data-color-scheme=secondary].text-scheme-text .rte a:hover,
 [data-color-scheme=secondary] .text-scheme-text.rte a:hover,
 [data-color-scheme=secondary].text-scheme-text.rte a:hover,
+[data-color-scheme=quaternary].text-scheme-text .rte a:hover,
+[data-color-scheme=quaternary] .text-scheme-text.rte a:hover,
+[data-color-scheme=quaternary].text-scheme-text.rte a:hover,
 [data-color-scheme=tertiary].text-scheme-text .rte a:hover,
 [data-color-scheme=tertiary] .text-scheme-text.rte a:hover,
 [data-color-scheme=tertiary].text-scheme-text.rte a:hover {
@@ -2413,6 +2430,9 @@ button span {
 [data-color-scheme=secondary].text-scheme-text .rte blockquote,
 [data-color-scheme=secondary] .text-scheme-text.rte blockquote,
 [data-color-scheme=secondary].text-scheme-text.rte blockquote,
+[data-color-scheme=quaternary].text-scheme-text .rte blockquote,
+[data-color-scheme=quaternary] .text-scheme-text.rte blockquote,
+[data-color-scheme=quaternary].text-scheme-text.rte blockquote,
 [data-color-scheme=tertiary].text-scheme-text .rte blockquote,
 [data-color-scheme=tertiary] .text-scheme-text.rte blockquote,
 [data-color-scheme=tertiary].text-scheme-text.rte blockquote {
@@ -2677,6 +2697,20 @@ button span {
   color: var(--color-scheme-text);
 }
 
+[data-color-scheme=quaternary].bg-scheme-background .plyr,
+[data-color-scheme=quaternary].bg-scheme-background .plyr__control,
+[data-color-scheme=quaternary] .bg-scheme-background .plyr,
+[data-color-scheme=quaternary] .bg-scheme-background .plyr__control {
+  background-color: var(--color-scheme-background);
+}
+
+[data-color-scheme=quaternary].text-scheme-text .plyr,
+[data-color-scheme=quaternary].text-scheme-text .plyr__control,
+[data-color-scheme=quaternary] .text-scheme-text .plyr,
+[data-color-scheme=quaternary] .text-scheme-text .plyr__control {
+  color: var(--color-scheme-text);
+}
+
 [data-shopify-xr-hidden] {
   display: none;
 }
@@ -2799,6 +2833,11 @@ shopify-payment-terms {
 [data-color-scheme=tertiary] .product-content-container.bg-scheme-background,
 [data-color-scheme=tertiary].product-content-container.bg-scheme-background {
   --payment-terms-background-color: var(--color-tertiary-background-hex);
+}
+
+[data-color-scheme=quaternary] .product-content-container.bg-scheme-background,
+[data-color-scheme=quaternary].product-content-container.bg-scheme-background {
+  --payment-terms-background-color: var(--color-quaternary-background-hex);
 }
 
 .shopify-challenge__container {
@@ -2969,11 +3008,13 @@ shopify-payment-terms {
 [data-color-scheme=primary] .bg-scheme-background :focus,
 [data-color-scheme=secondary] .bg-scheme-background :focus,
 [data-color-scheme=tertiary] .bg-scheme-background :focus,
+[data-color-scheme=quaternary] .bg-scheme-background :focus,
 [data-color-scheme=header] .bg-scheme-background :focus,
 [data-color-scheme=footer] .bg-scheme-background :focus,
 [data-color-scheme=primary].bg-scheme-background :focus,
 [data-color-scheme=secondary].bg-scheme-background :focus,
 [data-color-scheme=tertiary].bg-scheme-background :focus,
+[data-color-scheme=quaternary].bg-scheme-background :focus,
 [data-color-scheme=header].bg-scheme-background :focus,
 [data-color-scheme=footer].bg-scheme-background :focus {
   outline-width: var(--text-width);
@@ -2985,11 +3026,13 @@ shopify-payment-terms {
 [data-color-scheme=primary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=secondary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=tertiary] .bg-scheme-background .increase-target:focus::before,
+[data-color-scheme=quaternary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=header] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=footer] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=primary].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=secondary].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=tertiary].bg-scheme-background .increase-target:focus::before,
+[data-color-scheme=quaternary].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=header].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=footer].bg-scheme-background .increase-target:focus::before {
   outline: var(--text-width) solid -webkit-focus-ring-color;
@@ -3000,11 +3043,13 @@ shopify-payment-terms {
 [data-color-scheme=primary] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=secondary] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=tertiary] .bg-scheme-background .custom-input:focus + label,
+[data-color-scheme=quaternary] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=header] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=footer] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=primary].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=secondary].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=tertiary].bg-scheme-background .custom-input:focus + label,
+[data-color-scheme=quaternary].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=header].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=footer].bg-scheme-background .custom-input:focus + label {
   outline: var(--text-width) solid -webkit-focus-ring-color;
@@ -3014,11 +3059,13 @@ shopify-payment-terms {
 [data-color-scheme=primary] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=secondary] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=tertiary] .bg-scheme-background .product-media-object:focus,
+[data-color-scheme=quaternary] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=header] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=footer] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=primary].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=secondary].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=tertiary].bg-scheme-background .product-media-object:focus,
+[data-color-scheme=quaternary].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=header].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=footer].bg-scheme-background .product-media-object:focus {
   outline: 0;
@@ -3027,11 +3074,13 @@ shopify-payment-terms {
 [data-color-scheme=primary] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=secondary] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=tertiary] .bg-scheme-background .product-media-object:focus:after,
+[data-color-scheme=quaternary] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=header] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=footer] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=primary].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=secondary].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=tertiary].bg-scheme-background .product-media-object:focus:after,
+[data-color-scheme=quaternary].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=header].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=footer].bg-scheme-background .product-media-object:focus:after {
   width: 100%;

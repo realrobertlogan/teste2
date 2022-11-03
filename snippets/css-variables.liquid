@@ -140,6 +140,50 @@
         assign tertiary_accent_overlay = '#ffffff' 
       endif 
     endif 
+
+    comment
+    quaternary text overlay
+    endcomment
+    assign background = settings.color_quaternary_background | color_brightness 
+    assign background = background | plus: 0 
+    assign text = settings.color_quaternary_text | color_brightness 
+    assign text = text | plus: 0 
+    assign quaternary_overlay_color = '' 
+    if text > 127 
+      if background > 127 
+        assign quaternary_overlay_color = '#000000' 
+      else 
+        assign quaternary_overlay_color = settings.color_quaternary_background 
+      endif 
+    else 
+      if background > 127 
+        assign quaternary_overlay_color = settings.color_quaternary_background 
+      else 
+        assign quaternary_overlay_color = '#ffffff' 
+      endif 
+    endif 
+  
+    comment
+    quaternary text accent overlay
+    endcomment
+    assign background = settings.color_quaternary_background | color_brightness 
+    assign background = background | plus: 0 
+    assign text = settings.color_quaternary_accent | color_brightness 
+    assign text = text | plus: 0 
+    assign quaternary_accent_overlay = '' 
+    if text > 127 
+      if background > 127 
+        assign quaternary_accent_overlay = '#000000' 
+      else 
+        assign quaternary_accent_overlay = settings.color_quaternary_background 
+      endif 
+    else 
+      if background > 127 
+        assign quaternary_accent_overlay = settings.color_quaternary_background 
+      else 
+        assign quaternary_accent_overlay = '#ffffff' 
+      endif 
+    endif 
   
     comment
     White text overlay
@@ -272,6 +316,7 @@
   {%- capture icon_select_svg_primary -%}url({{ "ico-select__primary.svg" | asset_url }}){%- endcapture -%}
   {%- capture icon_select_svg_secondary -%}url({{ "ico-select__secondary.svg" | asset_url }}){%- endcapture -%}
   {%- capture icon_select_svg_tertiary -%}url({{ "ico-select__tertiary.svg" | asset_url }}){%- endcapture -%}
+  {%- capture icon_select_svg_quaternary -%}url({{ "ico-select__quaternary.svg" | asset_url }}){%- endcapture -%}
 
   @font-face {
     font-family: "Acumin";
@@ -335,6 +380,19 @@
     --color-tertiary-text-placeholder: {{ settings.color_tertiary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
     --color-tertiary-background-0: {{ settings.color_tertiary_background | color_to_rgb | color_modify: 'alpha', 0 }};
 
+    /*
+    quaternary color scheme
+    */
+    --color-quaternary-accent: {{ settings.color_quaternary_accent | color_to_rgb }};
+    --color-quaternary-text: {{ settings.color_quaternary_text | color_to_rgb }};
+    --color-quaternary-background: {{ settings.color_quaternary_background | color_to_rgb }};
+    --color-quaternary-background-hex: {{ settings.color_quaternary_background }};
+    --color-quaternary-meta: {{ settings.color_quaternary_meta | color_to_rgb }};
+    --color-quaternary-text--overlay: {{ quaternary_overlay_color | color_to_rgb }};
+    --color-quaternary-accent--overlay: {{ quaternary_accent_overlay | color_to_rgb }};
+    --color-quaternary-text-placeholder: {{ settings.color_quaternary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
+    --color-quaternary-background-0: {{ settings.color_quaternary_background | color_to_rgb | color_modify: 'alpha', 0 }};
+
     --white-text--overlay: {{ white_text_overlay_color | color_to_rgb }};
     --black-text--overlay: {{ black_text_overlay_color | color_to_rgb }};
 
@@ -394,7 +452,7 @@
     --icon-svg-select-primary: {{ icon_select_svg_primary }};
     --icon-svg-select-secondary: {{ icon_select_svg_secondary }};
     --icon-svg-select-tertiary: {{ icon_select_svg_tertiary }};
-
+    --icon-svg-select-quaternary: {{ icon_select_svg_quaternary }};
   }
 
   [data-color-scheme="primary"] {
@@ -429,6 +487,17 @@
     --color-scheme-text-placeholder: {{ settings.color_tertiary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
     --color-scheme-background-0: {{ settings.color_tertiary_background | color_to_rgb | color_modify: 'alpha', 0 }};
     --payment-terms-background-color: {{ settings.color_tertiary_background }};
+  }
+  [data-color-scheme="quaternary"] {
+    --color-scheme-text: {{ settings.color_quaternary_text | color_to_rgb }};
+    --color-scheme-background: {{ settings.color_quaternary_background | color_to_rgb }};
+    --color-scheme-accent: {{ settings.color_quaternary_accent | color_to_rgb }};
+    --color-scheme-meta: {{ settings.color_quaternary_meta | color_to_rgb }};
+    --color-scheme-text--overlay: {{ quaternary_overlay_color | color_to_rgb }};
+    --color-scheme-accent--overlay: {{ quaternary_accent_overlay | color_to_rgb }};
+    --color-scheme-text-placeholder: {{ settings.color_quaternary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
+    --color-scheme-background-0: {{ settings.color_quaternary_background | color_to_rgb | color_modify: 'alpha', 0 }};
+    --payment-terms-background-color: {{ settings.color_quaternary_background }};
   }
 
   [data-color-scheme="white"] {

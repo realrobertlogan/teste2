@@ -32,71 +32,6 @@
     {%- endif -%}
   {%- endfor -%}
 
-  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
-    <div id="splide" class="splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
-      <div id="splide-track" class="transition-max-height splide__track {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
-        <ul id="splide-list" class="splide__list w-full {% if settings.fill_image_to_border_edge %}{% else %}lg:gap-4{% endif%}">
-        {%- if featured_media != null -%}
-          {%- assign media = featured_media -%}
-          <li data-first-media class="splide__slide bg-scheme-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="0">
-            {%- render 'product-media_horizontal-gallery-template',
-              media: media,
-              image_index: image_index,
-              desktop_image_height: desktop_image_height,
-              slideshow_enabled: slideshow_enabled,
-              section_color: section_color,
-              enable_video_looping: enable_video_looping
-            -%}
-          </li>
-          {%- if media.media_type == 'image' -%}
-            {%- assign image_index = image_index | plus: 1 -%}
-          {%- endif -%}
-        {%- endif -%}
-        {% for media in product.media %}
-            {%- unless media.id == featured_media.id -%}
-            <li {% if featured_media == null and forloop.first %}data-first-media{% endif %} class="splide__slide bg-scheme-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="{% if featured_media == null %}{{ forloop.index0 }}{% else %}{{ forloop.index }}{% endif %}">
-              {%- render 'product-media_horizontal-gallery-template',
-                media: media,
-                image_index: image_index,
-                desktop_image_height: desktop_image_height,
-                slideshow_enabled: slideshow_enabled,
-                section_color: section_color,
-                enable_video_looping: enable_video_looping
-              -%}
-            </li>
-            {%- if media.media_type == 'image' -%}
-              {%- assign image_index = image_index | plus: 1 -%}
-            {%- endif -%}
-            {% endunless %}
-          {% endfor %}
-        </ul>
-      </div>
-      {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
-      <div class="js-enabled splide__arrows text-scheme-text absolute right-0 {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-1 lg:mr-4 text-right mt-2 ">
-        <button class="splide__arrow splide__arrow--prev w-8">
-          <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
-          <span class="block">{% render 'icon-previous' %}</span>
-        </button>
-        <button class="splide__arrow splide__arrow--next w-8">
-          <span class="visually-hidden">{{ 'sections.slideshow.next_slide' | t }}</span>
-          <span class="block">{% render 'icon-next' %}</span>
-        </button>
-      </div>
-      {%- if first_3d_model -%}
-        <div class="section-x-padding text-center">
-          <button aria-label="{{ 'products.product.view_in_space_label' | t }}"
-                  class="product-single__view-in-space mt-4 mb-2 lg:my-4 w-full py-2 pl-2 pr-4 max-w-sm text-center border-text border-scheme-text"
-                  data-shopify-xr
-                  data-shopify-model3d-id="{{ first_3d_model.id }}"
-                  data-shopify-title="{{ product.title }}"
-                  data-shopify-xr-hidden>
-            <span class="inline-block w-6 align-middle">{% render 'icon-3d-model' %}</span><span class="text-sm">{{ 'products.product.view_in_space' | t }}</span>
-          </button>
-        </div>
-      {%- endif -%}
-    </div>
-  </div>
-
   <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color">
 
     <div class="lg:col-start-10 lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding">
@@ -559,6 +494,71 @@
     {%- endunless -%}
   </div>
 
+  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
+    <div id="splide" class="splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
+      <div id="splide-track" class="transition-max-height splide__track {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
+        <ul id="splide-list" class="splide__list w-full {% if settings.fill_image_to_border_edge %}{% else %}lg:gap-4{% endif%}">
+        {%- if featured_media != null -%}
+          {%- assign media = featured_media -%}
+          <li data-first-media class="w-full splide__slide bg-scheme-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="0">
+            {%- render 'product-media_horizontal-gallery-template',
+              media: media,
+              image_index: image_index,
+              desktop_image_height: desktop_image_height,
+              slideshow_enabled: slideshow_enabled,
+              section_color: section_color,
+              enable_video_looping: enable_video_looping
+            -%}
+          </li>
+          {%- if media.media_type == 'image' -%}
+            {%- assign image_index = image_index | plus: 1 -%}
+          {%- endif -%}
+        {%- endif -%}
+        {% for media in product.media %}
+            {%- unless media.id == featured_media.id -%}
+            <li {% if featured_media == null and forloop.first %}data-first-media{% endif %} class="w-full splide__slide bg-scheme-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="{% if featured_media == null %}{{ forloop.index0 }}{% else %}{{ forloop.index }}{% endif %}">
+              {%- render 'product-media_horizontal-gallery-template',
+                media: media,
+                image_index: image_index,
+                desktop_image_height: desktop_image_height,
+                slideshow_enabled: slideshow_enabled,
+                section_color: section_color,
+                enable_video_looping: enable_video_looping
+              -%}
+            </li>
+            {%- if media.media_type == 'image' -%}
+              {%- assign image_index = image_index | plus: 1 -%}
+            {%- endif -%}
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
+      <div class="js-enabled splide__arrows text-scheme-text absolute right-0 {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-1 lg:mr-4 text-right mt-2 ">
+        <button class="splide__arrow splide__arrow--prev w-8">
+          <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
+          <span class="block">{% render 'icon-previous' %}</span>
+        </button>
+        <button class="splide__arrow splide__arrow--next w-8">
+          <span class="visually-hidden">{{ 'sections.slideshow.next_slide' | t }}</span>
+          <span class="block">{% render 'icon-next' %}</span>
+        </button>
+      </div>
+      {%- if first_3d_model -%}
+        <div class="section-x-padding text-center">
+          <button aria-label="{{ 'products.product.view_in_space_label' | t }}"
+                  class="product-single__view-in-space mt-4 mb-2 lg:my-4 w-full py-2 pl-2 pr-4 max-w-sm text-center border-text border-scheme-text"
+                  data-shopify-xr
+                  data-shopify-model3d-id="{{ first_3d_model.id }}"
+                  data-shopify-title="{{ product.title }}"
+                  data-shopify-xr-hidden>
+            <span class="inline-block w-6 align-middle">{% render 'icon-3d-model' %}</span><span class="text-sm">{{ 'products.product.view_in_space' | t }}</span>
+          </button>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
   {% unless product == empty %}
     <script type="application/json" data-product-json>
       {{ product | json }}
@@ -709,7 +709,8 @@
         "options": [
             { "value": "primary", "label": "Primary"},
             { "value": "secondary", "label": "Secondary"},
-            { "value": "tertiary", "label": "Tertiary"}
+            { "value": "tertiary", "label": "Tertiary"},
+            { "value": "quaternary", "label": "Quartenary"}
         ],
         "default":   "primary"
       },
