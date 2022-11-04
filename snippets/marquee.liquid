@@ -7,7 +7,7 @@
   assign speed_number = limit | minus: speed_number
 -%}
 {%- capture speed -%}marquee {{ speed_number}}s linear infinite{%- endcapture -%}
-<div id="marquee-{{ id }}" class="border-b-grid border-grid-color {% if text_size_class contains 'xl' %}py-4{% else %}py-2{% endif %} marquee bg-scheme-background text-scheme-text overflow-hidden" data-color-scheme="{{ section_color }}" {% if is_marquee %}style="background-color: #4606fd; color: #fff;"{% endif %}>
+<div id="marquee-{{ id }}" class="border-b-grid border-grid-color {% if text_size_class contains 'xl' %}py-4{% else %}py-2{% endif %} marquee bg-scheme-background text-scheme-text overflow-hidden" data-color-scheme="{{ section_color }}">
   {%- if link != blank -%}
   <a href="{{ link }}" class="text-scheme-text hover:text-scheme-accent">
   {%- endif -%}

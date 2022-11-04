@@ -494,13 +494,13 @@
     {%- endunless -%}
   </div>
 
-  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
-    <div id="splide" class="splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
-      <div id="splide-track" class="transition-max-height splide__track {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
+  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group data-color-scheme="quaternary">
+    <div id="splide" class="p-1/10 splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
+      <div id="splide-track" class="transition-max-height splide__track {%comment%}{% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %}{%endcomment%} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
         <ul id="splide-list" class="splide__list w-full {% if settings.fill_image_to_border_edge %}{% else %}lg:gap-4{% endif%}">
         {%- if featured_media != null -%}
           {%- assign media = featured_media -%}
-          <li data-first-media class="w-full splide__slide bg-scheme-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="0">
+          <li data-first-media class="w-full splide__slide bg-scheme-background relative {%comment%}{% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}{%endcomment%}" data-index="0">
             {%- render 'product-media_horizontal-gallery-template',
               media: media,
               image_index: image_index,
@@ -516,7 +516,7 @@
         {%- endif -%}
         {% for media in product.media %}
             {%- unless media.id == featured_media.id -%}
-            <li {% if featured_media == null and forloop.first %}data-first-media{% endif %} class="w-full splide__slide bg-scheme-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="{% if featured_media == null %}{{ forloop.index0 }}{% else %}{{ forloop.index }}{% endif %}">
+            <li {% if featured_media == null and forloop.first %}data-first-media{% endif %} class="w-full splide__slide bg-scheme-background relative {%comment%}{% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}{%endcomment%}" data-index="{% if featured_media == null %}{{ forloop.index0 }}{% else %}{{ forloop.index }}{% endif %}">
               {%- render 'product-media_horizontal-gallery-template',
                 media: media,
                 image_index: image_index,
