@@ -75,7 +75,6 @@
             "indent_image_left": false,
             "indent_color_left": "",
             "image_focal_point_left": "object-center",
-            "image_right": "shopify:\/\/shop_images\/Screen_Shot_202_2_13176e3f-2cc8-4b2d-908f-1bf4068e28f3.png",
             "indent_image_right": true,
             "indent_color_right": "#716252",
             "image_focal_point_right": "object-center",
@@ -136,7 +135,6 @@
         "d7605ea5-7312-45ac-b6ad-3ab6c0517c6e": {
           "type": "slide",
           "settings": {
-            "image_left": "shopify:\/\/shop_images\/L_2000008978965_3b33bea4-c7da-4212-96e5-eff8d2a15f00.png",
             "indent_image_left": false,
             "indent_color_left": "",
             "image_focal_point_left": "object-center",
@@ -157,11 +155,9 @@
         "87443c4a-6c78-4b09-ba92-ff49d5b8b833": {
           "type": "slide",
           "settings": {
-            "image_left": "shopify:\/\/shop_images\/L_2000008978965_3b33bea4-c7da-4212-96e5-eff8d2a15f00.png",
             "indent_image_left": false,
             "indent_color_left": "",
             "image_focal_point_left": "object-center",
-            "image_right": "shopify:\/\/shop_images\/L_2000008978965_1_7360dbb2-d766-4231-9477-170282e113ee.png",
             "indent_image_right": false,
             "indent_color_right": "",
             "image_focal_point_right": "object-center",
@@ -198,8 +194,8 @@
     "64cf44de-9249-47f8-aba9-64c528c4a67f": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Path_14_4955beb7-5775-41b7-b977-3bd6917c321d.png",
-        "image_mobile": "shopify:\/\/shop_images\/Path_14_67b31e74-4111-486a-8f37-e5485a97d267.png",
+        "image": "shopify:\/\/shop_images\/Path_14_9e4d8e31-9b6a-43db-951b-64befe4569af.png",
+        "image_mobile": "shopify:\/\/shop_images\/Path_14_1_e821d87b-3af4-4b0a-ae40-8bd2e9171171.png",
         "indent_image": false,
         "height": "natural",
         "image_focal_point": "object-center",
@@ -232,7 +228,7 @@
     "7220387b-507c-4bfa-9ec0-0ce883020d2b": {
       "type": "image-with-post",
       "settings": {
-        "article": "news\/test",
+        "article": "news\/demo-post1",
         "article_position": "right",
         "article_size": "half",
         "background_color": "tertiary",
@@ -273,7 +269,7 @@
     "d635facd-8659-406b-bd23-18ebbf2706ba": {
       "type": "image-with-post",
       "settings": {
-        "article": "news\/test",
+        "article": "news\/demo-post1",
         "article_position": "right",
         "article_size": "half",
         "background_color": "secondary",
