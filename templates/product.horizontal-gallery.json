@@ -39,28 +39,37 @@
             "truncate_description": false
           }
         },
-        "icon_list": {
-          "type": "icon_list",
+        "d1b3a1f7-ea69-4134-aa60-29ed54804045": {
+          "type": "collapsible_tab",
           "settings": {
-            "position": "product_extra",
-            "heading": "Icon list",
-            "text_color": "secondary",
-            "text_1": "List item",
-            "icon_1": "box",
-            "text_2": "List item",
-            "icon_2": "ruler",
-            "text_3": "List item",
-            "icon_3": "globe",
-            "text_4": "List item",
-            "icon_4": "washing",
-            "text_5": "List item",
-            "icon_5": "truck"
+            "position": "product_form",
+            "heading": "Materials",
+            "heading_text_style": "body",
+            "content": "",
+            "page": "",
+            "icon": "none"
           }
         },
-        "share_buttons": {
-          "type": "share_buttons",
+        "7fcf4c7f-1ad4-44ea-bc2b-5aa6ed991028": {
+          "type": "collapsible_tab",
           "settings": {
-            "position": "product_extra"
+            "position": "product_form",
+            "heading": "Description",
+            "heading_text_style": "body",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "fd4686d5-f389-4efb-a716-9714af83b436": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_form",
+            "heading": "Sizing",
+            "heading_text_style": "body",
+            "content": "",
+            "page": "",
+            "icon": "none"
           }
         }
       },
@@ -71,8 +80,9 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "icon_list",
-        "share_buttons"
+        "d1b3a1f7-ea69-4134-aa60-29ed54804045",
+        "7fcf4c7f-1ad4-44ea-bc2b-5aa6ed991028",
+        "fd4686d5-f389-4efb-a716-9714af83b436"
       ],
       "settings": {
         "desktop_image_height": 70,
