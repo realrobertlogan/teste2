@@ -53,7 +53,7 @@
 
       <li class="{{ col_span }} relative bg-scheme-background" {{ block.shopify_attributes }} data-color-scheme="{{ block_color }}">
         <a class="group h-full block relative hover:text-scheme-accent" href="{{ collection.url }}" data-color-scheme="{{ text_color }}">
-          <div class="flex h-full justify-center items-center {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %} {% if indent_image %}p-8 lg:p-16{% endif %}">
+          <div class="flex h-full justify-center items-center {%comment%}{%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%}{%endcomment%} {% if indent_image %}p-8 lg:p-16{% endif %}">
             <div class="w-full relative" data-color-scheme="{{ section_color }}">
               {% if collection.image != blank or collection.products.first != blank %}
                 {%- assign image = collection.image | default: collection.products.first.featured_image -%}
@@ -72,7 +72,7 @@
           </div>
           {%- assign text_size_class = section.settings.text_size -%}
           <div class="absolute top-0 left-0 right-0 bottom-0 z-10 py-4 section-x-padding flex {{ content_position }}">
-            <div class="text-scheme-text {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %} break-words w-full">
+            <div class="text-scheme-text {%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%} break-words w-full">
               <div class="{{ text_size_class }} font-heading">
                 {% if collection.title == blank %}
                   {{ 'homepage.onboarding.collection_title' | t }}

@@ -20,7 +20,7 @@
          data-section-type="video-with-text-overlay"
          data-section-id="{{ section.id }}"
          data-has-background-video>
-  <div class="{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}">
+  <div class="{%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%}">
     <div class="background-video-wrapper h-auto bg-black p-0  relative overflow-hidden {{ size_classes }} {% unless settings.fill_image_to_border_edge %}not_full_bleed{% endunless %}">
       {% assign component_id = 'background-video-' | append: section.id %}
       {% render 'background-video',
@@ -32,7 +32,7 @@
     </div>
     <div class="{{ content_width_desktop }} text-scheme-text" data-color-scheme="{{ text_color }}">
       <div class="absolute top-0 left-0 right-0 bottom-0 z-10 section-x-padding py-theme">
-        <div class="flex {{ content_position }} {{ text_align }} {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %} h-full w-full">
+        <div class="flex {{ content_position }} {{ text_align }} {%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%} h-full w-full">
           <div class="{{ content_width_desktop }} text-scheme-text overflow-hidden">
             {% if section.settings.title != blank %}
               <h2 class="font-heading {{ heading_size_class }} break-words">{{ section.settings.title }}</h2>

@@ -100,7 +100,7 @@
 <article class="article text-scheme-text bg-scheme-background" data-color-scheme="{{ section_color }}">
   <div class="grid grid-cols-1 lg:grid-cols-12  bg-border gap-gutter">
     {%- if article.image != blank -%}
-    <div class="lg:col-span-12 relative full-h bg-scheme-background {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %} {% unless image_width_desktop == 'full' %}lg:hidden{% endunless %}">
+    <div class="lg:col-span-12 relative full-h bg-scheme-background {%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%} {% unless image_width_desktop == 'full' %}lg:hidden{% endunless %}">
       <div class="relative {% if indent_image %}p-8 lg:p-16{% endif %}">
         {% render 'image-crop' with
           image: article.image,
@@ -222,7 +222,7 @@
     {% if show_sidebar %}
     <div class="hidden lg:block  bg-scheme-background text-scheme-text {{ sidebar_grid_class }}">
       {%- if article.image != blank and image_width_desktop != 'full' -%}
-      <div class="hidden lg:block {% if show_author or show_date or show_tags_and_tags_present %}border-b-grid border-grid-color{% endif %} relative full-h bg-scheme-background {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %} lg:-mb-theme-width">
+      <div class="hidden lg:block {% if show_author or show_date or show_tags_and_tags_present %}border-b-grid border-grid-color{% endif %} relative full-h bg-scheme-background {%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%} lg:-mb-theme-width">
         <div class="relative {% if indent_image %}p-8 lg:p-16{% endif %}">
           {% render 'image-crop' with
             image: article.image,

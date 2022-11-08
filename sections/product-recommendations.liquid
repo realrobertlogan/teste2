@@ -27,13 +27,14 @@
     {% if recommendations.products_count > 0 %}
       <div class="product-recommendations" data-color-scheme="{{ section_color }}">
         <div class="product-recommendations-container border-t-grid border-grid-color">
-          {% if section.settings.product_recommendations_heading != '' %}
-            {%- render 'section-title',
-              title: section.settings.product_recommendations_heading,
-              section_color: section_color
-            -%}
-          {% endif %}
           <ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter bg-border z-10">
+            <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text">
+              {% if section.settings.product_recommendations_heading != '' %}
+                <div class="py-4 section-x-padding">
+                  <p class="featured text-2xl">{{ section.settings.product_recommendations_heading }}
+                </div>
+              {% endif %}
+            </li>
             {%- for product in recommendations.products -%}
               {%- assign counter = counter | plus: 1 -%}
               <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text">

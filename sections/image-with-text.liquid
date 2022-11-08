@@ -34,7 +34,7 @@
 -%}
 
 <section class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden border-t-grid border-grid-color">
-  <div class="bg-scheme-background {{ image_width_desktop }} {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4 h-full w-full{% endunless %} {% if indent_image %}p-8 lg:p-16{% endif %}" data-color-scheme="{{ image_background_color }}">
+  <div class="bg-scheme-background {{ image_width_desktop }} {% unless settings.fill_image_to_border_edge %}{%comment%}p-2 lg:p-4{%endcomment%} h-full w-full{% endunless %} {% if indent_image %}p-8 lg:p-16{% endif %}" data-color-scheme="{{ image_background_color }}">
     <div class="relative min-h-full">
       {%- if section.settings.image != blank -%}
         {%- assign image = section.settings.image -%}

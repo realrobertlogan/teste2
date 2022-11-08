@@ -13,7 +13,7 @@
   {% endif %}
 
 
-  <div class="{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}">
+  <div class="{%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%}">
     <div  x-data='ThemeComponent_Video("featuredVideo-{{ section.id }}", "external_video", {{ section.settings.video_url.type | json }})' x-init="mounted()" class="feature-video__video {% unless section.settings.full_width %} wrapper{% endunless %}">
       <div x-ref="video_container" class="relative overflow-hidden" style="padding-bottom: {{ ratio }}%;">
         <template x-if="!enabled">

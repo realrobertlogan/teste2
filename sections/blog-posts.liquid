@@ -30,7 +30,7 @@
 -%}
 
 {%- capture placeholder_image -%}
-  <div class="bg-scheme-background {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}p-2 lg:p-4{% endif %}" data-color-scheme="{{ section_color }}">
+  <div class="bg-scheme-background {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{%comment%}{% else %}p-2 lg:p-4{%endcomment%}{% endif %}" data-color-scheme="{{ section_color }}">
     <div class="relative h-full w-full bg-placeholder-bg">
       {% render 'placeholder-crop' with
         ratio: ratio,
@@ -59,7 +59,7 @@
         <div class="group block h-full">
           {%- if section.settings.blog_show_images -%}
             {%- if article.image != blank -%}
-              <div class="full-h bg-scheme-background border-grid {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}pt-2 px-2 lg:pt-4 lg:px-4{% endif %}">
+              <div class="full-h bg-scheme-background border-grid border-grid-color{% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}{%comment%}pt-2 px-2 lg:pt-4 lg:px-4{%endcomment%}{% endif %}">
                 <div class="relative">
                   {% render 'image-crop' with
                     image: article.image,

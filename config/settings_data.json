@@ -38,7 +38,7 @@
     "links_show_arrow": false,
     "links_show_underline": false,
     "spacing": "medium",
-    "fill_image_to_border_edge": true,
+    "fill_image_to_border_edge": false,
     "border_width": 1,
     "product_grid_image_size": "1",
     "title_price_display": "under_image",
