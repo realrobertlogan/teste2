@@ -34,7 +34,7 @@
 
   <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color">
     <div class="lg:col-start-1 lg:col-end-7 bg-scheme-background">
-      <div class="p-1/8 full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-grid border-grid-color{% else %}pt-2 lg:pt-4 lg:px-4 px-8 lg:px-4{% endif %}">
+      <div class="p-1/8 full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}pt-2 lg:pt-4 lg:px-4 px-8 lg:px-4{% endif %}">
         <div class="relative">
           {% render 'image-crop' with
             image: product.featured_media,
@@ -43,8 +43,8 @@
         </div>
       </div>
     </div>
-    <div class="grid lg:grid-cols-12 lg:col-start-7 lg:col-end-13 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color">
-      <div class="lg:col-start-1 lg:col-end-9 bg-scheme-background text-scheme-text h-full section-x-padding">
+    <div class="grid lg:grid-cols-12 lg:col-start-7 lg:col-end-13 gap-gutter bg-border grid-flow-row-dense">
+      <div class="lg:col-start-1 lg:col-end-9 bg-scheme-background text-scheme-text h-full section-x-padding border-b-grid border-grid-color">
         <div class="lg:sticky lg:top-sticky-header py-theme product-block-area">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
           {%- assign tab_counter = 0 -%}
@@ -303,16 +303,12 @@
                     {%- endif -%}
 
                     <div class="add-to-cart-container mt-8" data-color-scheme="quaternary">
-                      {%- if block.settings.enable_payment_button -%}
                         {%- capture cta_button_class -%}{% render 'button-style' %} bg-scheme-background text-scheme-text border-text border-scheme-text hover:border-scheme-accent hover:text-scheme-accent{%- endcapture -%}
-                      {%- else -%}
-                        {%- capture cta_button_class -%}{% render 'button-style' %} {% render 'button-color', section_color: section_color %}{%- endcapture -%}
-                      {%- endif -%}
 
                       <button
                         id="addToCartButton"
                         @click="$store.drawer.cartOpener = $event.currentTarget"
-                        class="add-to-cart px-1 py-2 lg:w-1/2 rounded-full {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_class }}
+                        class="add-to-cart px-1 py-2 w-full lg:w-1/2 rounded-full {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_class }}
                         {% unless current_variant.available %}opacity-50 cursor-not-allowed{% endunless %}"
                         type="submit"
                         :class="{ 'opacity-50 cursor-not-allowed': !currentVariantAvailable }"
@@ -345,7 +341,7 @@
                         {%- if button_color == 'transparent_background_text_border' -%}
                           {%- assign button_color = 'text_background' -%}
                         {%- endif -%}
-                        <div class="mt-2 payment-button-wrapper {% render 'button-style' %}  color-scheme style-{{ button_color }}">{{ form | payment_button }}</div>
+                        <div class="mt-2 lg:w-1/2 payment-button-wrapper rounded-full {% render 'button-style' %}  color-scheme style-{{ button_color }}">{{ form | payment_button }}</div>
                       {%- endif -%}
 
                     </div>
@@ -408,7 +404,7 @@
           {%- endfor -%}
         </div>
       </div>
-      <div class="product-description {% if no_social_blocks %}lg:col-start-9{% else %}lg:col-start-9{% endif %} lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding py-theme product-block-area">
+      <div class="product-description border-b-grid border-grid-color {% if no_social_blocks %}lg:col-start-9{% else %}lg:col-start-9{% endif %} lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding py-theme product-block-area">
         {%- assign tab_counter = 0 -%}
         {%- for block in section.blocks -%}
           {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' or block.type == 'complementary' -%}
