@@ -75,6 +75,7 @@
             "indent_image_left": false,
             "indent_color_left": "",
             "image_focal_point_left": "object-center",
+            "image_right": "shopify:\/\/shop_images\/Screen_Shot_202_2.png",
             "indent_image_right": true,
             "indent_color_right": "#716252",
             "image_focal_point_right": "object-center",
