@@ -1193,6 +1193,10 @@
   padding-bottom: var(--spacing-double);
 }
 
+.pb-theme-quadruple{
+  padding-bottom: calc(var(--spacing-double) * 2);
+}
+
 .placeholder-current::-moz-placeholder{
   color: currentColor;
 }
