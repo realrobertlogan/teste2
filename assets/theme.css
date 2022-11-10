@@ -1189,6 +1189,10 @@
   padding-top: var(--spacing-double);
 }
 
+.pt-theme-quadruple{
+  padding-top: calc(var(--spacing-double) * 2);
+}
+
 .pb-theme-double{
   padding-bottom: var(--spacing-double);
 }
@@ -1295,6 +1299,10 @@
 
 .left-1\/2{
   left: 50%;
+}
+
+.left-1\/10{
+  left: 10%;
 }
 
 .right-1\/10{
@@ -3168,7 +3176,10 @@ shopify-payment-terms {
   margin-top: calc(-1 * var(--spacing));
 }
 
-.product-block-area .collapsible-tab:first-child > div,
+.product-block-area .collapsible-tab:last-child > div {
+  border-bottom: 0;
+}
+
 .product-block-area .product-recommendations:not(:empty):first-child > div {
   border-top: 0;
 }

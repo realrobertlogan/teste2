@@ -34,7 +34,7 @@
 
   <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color">
     <div class="lg:col-start-1 lg:col-end-7 bg-scheme-background">
-      <div class="p-1/8 full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}pt-2 lg:pt-4 lg:px-4 px-8 lg:px-4{% endif %}">
+      <div class="full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}pt-2 pb-2 lg:py-4 lg:px-4 px-8 lg:px-4{% endif %}">
         <div class="relative">
           {% render 'image-crop' with
             image: product.featured_media,
@@ -45,7 +45,8 @@
     </div>
     <div class="grid lg:grid-cols-12 lg:col-start-7 lg:col-end-13 gap-gutter bg-border grid-flow-row-dense">
       <div class="lg:col-start-1 lg:col-end-9 bg-scheme-background text-scheme-text h-full section-x-padding border-b-grid border-grid-color">
-        <div class="lg:sticky lg:top-sticky-header py-theme product-block-area">
+        <div class="py-theme product-block-area h-full flex justify-between flex-col">
+          <div class="pt-theme-quadruple">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
           {%- assign tab_counter = 0 -%}
           {%- for block in section.blocks -%}
@@ -62,7 +63,7 @@
                   {% if product.variants[0].sku %}
                     <p class="text-lg">({{ product.variants[0].sku }})</p>
                   {% endif %}
-                  <h1 {{ block.shopify_attributes }} class="product-title-block mt-4 break-words font-heading {{ settings.template_heading_size }}">{{ product.title }}</h1>
+                  <h1 {{ block.shopify_attributes }} class="product-title-block break-words font-heading {{ settings.template_heading_size }}">{{ product.title }}</h1>
                 {%- when 'vendor' -%}
                   {%- liquid
                     assign use_collection_vendor_link = false
@@ -303,7 +304,7 @@
                     {%- endif -%}
 
                     <div class="add-to-cart-container mt-8" data-color-scheme="quaternary">
-                        {%- capture cta_button_class -%}{% render 'button-style' %} bg-scheme-background text-scheme-text border-text border-scheme-text hover:border-scheme-accent hover:text-scheme-accent{%- endcapture -%}
+                        {%- capture cta_button_class -%}{% render 'button-style' %} bg-scheme-background text-scheme-text border-text border-scheme-meta hover:border-scheme-meta hover:text-scheme-accent{%- endcapture -%}
 
                       <button
                         id="addToCartButton"
@@ -379,12 +380,6 @@
                   {% render 'product-block-text', block: block %}
                 {%- when 'richtext' -%}
                   {% render 'product-block-richtext', block: block %}
-                {%- when 'collapsible_tab' -%}
-                  {% render 'product-block-collapsible-tab',
-                    block: block,
-                    tab_counter: tab_counter
-                  %}
-                  {%- assign tab_counter = tab_counter | plus: 1 -%}
                 {%- when 'icon_list' -%}
                   {% render 'product-block-icon-list',
                     block: block,
@@ -402,9 +397,21 @@
               {%- endcase -%}
             {%- endif -%}
           {%- endfor -%}
+          </div>
+          <div>
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'collapsible_tab' -%}
+                {% render 'product-block-collapsible-tab',
+                  block: block,
+                  tab_counter: tab_counter
+                %}
+                {%- assign tab_counter = tab_counter | plus: 1 -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
         </div>
       </div>
-      <div class="product-description border-b-grid border-grid-color {% if no_social_blocks %}lg:col-start-9{% else %}lg:col-start-9{% endif %} lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding py-theme product-block-area">
+      <div class="product-description flex items-end border-b-grid border-grid-color {% if no_social_blocks %}lg:col-start-9{% else %}lg:col-start-9{% endif %} lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding py-theme product-block-area">
         {%- assign tab_counter = 0 -%}
         {%- for block in section.blocks -%}
           {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' or block.type == 'complementary' -%}
@@ -549,12 +556,12 @@
         </ul>
       </div>
       {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
-      <div class="js-enabled splide__arrows text-scheme-text absolute right-1/10 top-1/2 {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-1 lg:mr-4 text-right mt-2 ">
-        <button class="splide__arrow splide__arrow--prev w-16">
+      <div class="js-enabled splide__arrows text-scheme-text {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-1 lg:mr-4 text-right mt-2 ">
+        <button class="splide__arrow splide__arrow--prev w-16 absolute left-1/10 top-1/2">
           <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
           <span class="block">{% render 'icon-previous' %}</span>
         </button>
-        <button class="splide__arrow splide__arrow--next w-16">
+        <button class="splide__arrow splide__arrow--next w-16 absolute right-1/10 top-1/2">
           <span class="visually-hidden">{{ 'sections.slideshow.next_slide' | t }}</span>
           <span class="block">{% render 'icon-next' %}</span>
         </button>

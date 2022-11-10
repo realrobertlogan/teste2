@@ -7,7 +7,7 @@
       {%- render block -%}
       </div>
     {%- when 'title' -%}
-      <h1 {{ block.shopify_attributes }} class="product-title-block mt-4 break-words font-heading {{ settings.template_heading_size }}">
+      <h1 {{ block.shopify_attributes }} class="product-title-block break-words font-heading {{ settings.template_heading_size }}">
         {%- if feature_product_section -%}<a href="{{ product.url }}">{%- endif -%}
         {{ product.title }}
         {%- if feature_product_section -%}
@@ -255,7 +255,7 @@
 
         <div class="add-to-cart-container mt-8 lg:w-3/4">
           {%- if block.settings.enable_payment_button -%}
-            {%- capture cta_button_class -%}{% render 'button-style' %} bg-transparent text-scheme-text border-text border-scheme-text hover:border-scheme-accent hover:text-scheme-accent{%- endcapture -%}
+            {%- capture cta_button_class -%}{% render 'button-style' %} bg-transparent text-scheme-text border-text border-scheme-meta hover:border-scheme-accent hover:text-scheme-accent{%- endcapture -%}
           {%- else -%}
             {%- capture cta_button_class -%}{% render 'button-style' %} {% render 'button-color', section_color: section_color %}{%- endcapture -%}
           {%- endif -%}
@@ -264,7 +264,7 @@
             id="addToCartButton"
             @click="$store.drawer.cartOpener = $event.currentTarget"
             class="add-to-cart px-1 py-2 w-full {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_class }}
-            {% unless current_variant.available %}opacity-50 cursor-not-allowed{% endunless %}"
+            {% unless current_variant.available %}opacity-50 cursor-not-allowed{% endunless %} border-scheme-meta"
             type="submit"
             :class="{ 'opacity-50 cursor-not-allowed': !currentVariantAvailable }"
             :disabled="!currentVariantAvailable || loading"
