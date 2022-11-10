@@ -16,6 +16,7 @@
     "color_quaternary_text": "#ffffff",
     "color_quaternary_background": "#4606fd",
     "color_quaternary_accent": "#ddff55",
+    "color_quaternary_meta": "#030303",
     "button_color": "transparent_background_text_border",
     "button_style": "square",
     "base_font_size": 12,
