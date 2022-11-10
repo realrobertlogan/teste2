@@ -85,12 +85,12 @@
   <div class="order-0 lg:order-1 {{ text_width_desktop }} bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-theme flex {{ text_position }} flex-col justify-between" data-color-scheme="{{ section_color }}">
     {% comment %} <div class="{{ text_align }} break-words w-full"> {% endcomment %}
     {%- if section.settings.subtitle != blank -%}
-      <h2 class="font-heading {{ settings.secondary_heading_size }} featured">{{ section.settings.subtitle }}</h2>
+      <p class="font-heading {{ settings.secondary_heading_size }} featured">{{ section.settings.subtitle }}</p>
     {%- endif -%}
 
     <div class="text-center w-full">
       {%- if section.settings.title != blank -%}
-        <h2 class="font-heading text-2xl lg:text-7xl mb-theme">{{ section.settings.title }}</h2>
+        <h2 class="font-heading text-2xl lg:text-10xl mb-theme journal-font">{{ section.settings.title }}</h2>
       {%- endif -%}
 
       {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
