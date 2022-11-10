@@ -1832,6 +1832,11 @@ body {
   src: url("Acumin-RPro.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Digestive";
+  src: url("Digestive-zero.woff2") format("woff2");
+}
+
 .font-heading {
   font-family: var(--heading-font-stack);
   font-weight: var(--heading-font-weight);
@@ -3470,6 +3475,11 @@ shopify-payment-terms {
     line-height: 1;
   }
 
+  .lg\:text-10xl{
+    font-size: 10rem;
+    line-height: 1;
+  }
+
   .lg\:mx-2{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -3991,4 +4001,8 @@ header[data-color-scheme="header"] .logo-image {
   .lg\:order-1 {
     order: 1;
   }
+}
+
+.journal-font {
+  font-family: "Digestive";
 }
