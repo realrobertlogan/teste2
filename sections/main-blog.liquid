@@ -16,8 +16,8 @@
 <section class="bg-scheme-background text-scheme-text blog border-t-grid border-grid-color" data-color-scheme="{{ section_color }}">
 
   {%- if show_title -%}
-  <div class="bg-scheme-background text-scheme-text section-x-padding pt-theme-double pb-theme  border-b-grid border-grid-color">
-    <h1 class="font-heading {{ settings.template_heading_size }} {% if settings.section_title_align == 'center' %}text-center{% endif %}">
+  <div class="bg-scheme-background text-scheme-text section-x-padding pt-theme-double pb-theme  border-b-grid border-grid-color flex justify-end">
+    <h1 class="text-center w-11/12 font-heading {{ settings.template_heading_size }} {% if settings.section_title_align == 'center' %}text-center{% endif %}">
       {{ blog.title }}
       {% if show_rss %}
       <a href="{{ shop.url }}{{ blog.url }}.atom">
@@ -98,9 +98,9 @@
         -%}
         
 
-        <li class="relative grid lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden {% unless forloop.first %}border-t-grid border-grid-color{% endunless %}">
+        <li class="relative grid lg:grid-cols-12 grid-flow-row-dense lg:bg-border gap-gutter overflow-hidden {% unless forloop.first %}border-t-grid border-grid-color{% endunless %}">
           {%- if article.image != blank -%}
-            <div class="{{ image_width_desktop }} relative full-h bg-scheme-background {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4 flex items-center{% endunless %}">
+            <div class="order-1 {{ image_width_desktop }} relative full-h bg-scheme-background {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4 flex items-center{% endunless %}">
               {% render 'image-crop' with
                 image: article.image,
                 ratio: ratio,
@@ -108,20 +108,29 @@
               %}
             </div>
           {%- endif -%}
-          <div class="{{ content_width_desktop }} bg-scheme-background text-scheme-text section-x-padding py-theme lg:flex {{ section.settings.feature_content_position }}  {% if article.image == blank %}col-span-2{% endif %}  overflow-hidden">
-            <a class="increase-target" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}"></a>
-            <div class="lg:w-2/3">
-              <h2 class="font-heading {{ settings.base_heading_size }}  break-words">{{ article.title }}</h2>
+          <div class="order-0 {{ content_width_desktop }} bg-scheme-background text-scheme-text section-x-padding py-theme lg:flex {{ section.settings.feature_content_position }}  {% if article.image == blank %}col-span-2{% endif %}  overflow-hidden">
+            <div class="h-full flex flex-col justify-between w-full">
+              <div>
+                {%- if show_date -%}
+                  <p class="featured-sm mt-2 text-2xl">
+                    {{ article.published_at | time_tag: format: 'month_day_year' }}
+                  </p>
+                {%- endif -%}
 
+                <h2 class="font-heading {{ settings.base_heading_size }}  break-words">{{ article.title }}</h2>
+              </div>
+              {% comment %} 
               {%- if show_author -%}
                 <p class="mt-2">{{ 'blogs.article.by_author' | t: author: article.author }}</p>
-              {%- endif -%}
-
-              {%- if show_date -%}
-                <p class="mt-2">
-                  {{ article.published_at | time_tag: format: 'month_day_year' }}
-                </p>
-              {%- endif -%}
+              {%- endif -%} {% endcomment %}
+            
+              <div class="text-center p-1/5 lg:p-4">
+                {% if show_link %}
+                  <a class="border-scheme-accent border-grid py-4 px-12 hover:text-scheme-accent text-base align-top inline-flex items-center justify-center {% if settings.links_show_underline %}border-b-text border-scheme-text hover:border-scheme-accent pb-1{% endif %}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                      <span class="{% if settings.links_uppercase %}uppercase{% endif %}">{{ 'blogs.article.read_more' | t }} {% if settings.links_show_arrow %}&rarr;{% endif %}</span>
+                  </a>
+                {%- endif -%}
+              </div>
 
               {%- if show_excerpt -%}
                 <div class="rte mt-4">
@@ -133,7 +142,7 @@
                 </div>
               {%- endif -%}
 
-              {% if article.tags.size > 0 and show_tags %}
+              {% comment %} {% if article.tags.size > 0 and show_tags %}
                 <div class="mt-4">
                   <ul class="m-0 p-0 -mx-1" aria-label="{{ 'blogs.article.tags' | t }}">
                     {% for tag in article.tags %}
@@ -155,15 +164,7 @@
                   </li>
                 {% endif %}
                 </ul>
-              {% endif %}
-
-              {% if show_link %}
-              <div class="mt-4">
-                <span class="hover:text-scheme-accent text-base align-top inline-flex items-center justify-center {% if settings.links_show_underline %}border-b-text border-scheme-text hover:border-scheme-accent pb-1{% endif %}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
-                  <span class="{% if settings.links_uppercase %}uppercase{% endif %}">{{ 'blogs.article.read_more' | t }} {% if settings.links_show_arrow %}&rarr;{% endif %}</span>
-                </span>
-              </div>
-              {%- endif -%}
+              {% endif %} {% endcomment %}
             </div>
           </div>
         </li>

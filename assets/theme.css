@@ -1040,6 +1040,10 @@
   padding: 2rem;
 }
 
+.p-1\/5 {
+  padding: 25%;
+}
+
 .p-px{
   padding: 1px;
 }
@@ -1087,6 +1091,11 @@
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .py-10{
