@@ -18,7 +18,7 @@
         "show_link": true,
         "crop": "1",
         "no_posts": 6,
-        "color_scheme": "secondary",
+        "color_scheme": "tertiary",
         "override_header_footer_color_scheme": true
       }
     },
