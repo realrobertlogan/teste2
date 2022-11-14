@@ -3,8 +3,6 @@
     "main": {
       "type": "main-page-contact",
       "settings": {
-        "image": "shopify:\/\/shop_images\/ZZ_Photoshoot_I_f7f38a4b-7f37-4a32-8cb1-71f5b8eea7b0.png",
-        "text": "<p>For all customer service and wholesale inquiries, please<\/p><p>contact info@fmillerskincare.com<br\/><br\/>For all press inquiries, please contact press@fmillerskincare.com<br\/><br\/>Follow F. MILLER on <br\/>Instagram<br\/>Pinterest<br\/>Facebook<\/p>",
         "color_scheme": "quinary",
         "override_header_footer_color_scheme": true
       }
