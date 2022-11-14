@@ -317,6 +317,7 @@
   {%- capture icon_select_svg_secondary -%}url({{ "ico-select__secondary.svg" | asset_url }}){%- endcapture -%}
   {%- capture icon_select_svg_tertiary -%}url({{ "ico-select__tertiary.svg" | asset_url }}){%- endcapture -%}
   {%- capture icon_select_svg_quaternary -%}url({{ "ico-select__quaternary.svg" | asset_url }}){%- endcapture -%}
+  {%- capture icon_select_svg_quinary -%}url({{ "ico-select__quinary.svg" | asset_url }}){%- endcapture -%}
 
   @font-face {
     font-family: "Acumin";
@@ -393,6 +394,19 @@
     --color-quaternary-text-placeholder: {{ settings.color_quaternary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
     --color-quaternary-background-0: {{ settings.color_quaternary_background | color_to_rgb | color_modify: 'alpha', 0 }};
 
+    /*
+    quinary color scheme
+    */
+    --color-quinary-accent: {{ settings.color_quinary_accent | color_to_rgb }};
+    --color-quinary-text: {{ settings.color_quinary_text | color_to_rgb }};
+    --color-quinary-background: {{ settings.color_quinary_background | color_to_rgb }};
+    --color-quinary-background-hex: {{ settings.color_quinary_background }};
+    --color-quinary-meta: {{ settings.color_quinary_meta | color_to_rgb }};
+    --color-quinary-text--overlay: {{ quinary_overlay_color | color_to_rgb }};
+    --color-quinary-accent--overlay: {{ quinary_accent_overlay | color_to_rgb }};
+    --color-quinary-text-placeholder: {{ settings.color_quinary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
+    --color-quinary-background-0: {{ settings.color_quinary_background | color_to_rgb | color_modify: 'alpha', 0 }};
+
     --white-text--overlay: {{ white_text_overlay_color | color_to_rgb }};
     --black-text--overlay: {{ black_text_overlay_color | color_to_rgb }};
 
@@ -453,6 +467,7 @@
     --icon-svg-select-secondary: {{ icon_select_svg_secondary }};
     --icon-svg-select-tertiary: {{ icon_select_svg_tertiary }};
     --icon-svg-select-quaternary: {{ icon_select_svg_quaternary }};
+    --icon-svg-select-quinary: {{ icon_select_svg_quinary }};
   }
 
   [data-color-scheme="primary"] {
@@ -498,6 +513,18 @@
     --color-scheme-text-placeholder: {{ settings.color_quaternary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
     --color-scheme-background-0: {{ settings.color_quaternary_background | color_to_rgb | color_modify: 'alpha', 0 }};
     --payment-terms-background-color: {{ settings.color_quaternary_background }};
+  }
+
+  [data-color-scheme="quinary"] {
+    --color-scheme-text: {{ settings.color_quinary_text | color_to_rgb }};
+    --color-scheme-background: {{ settings.color_quinary_background | color_to_rgb }};
+    --color-scheme-accent: {{ settings.color_quinary_accent | color_to_rgb }};
+    --color-scheme-meta: {{ settings.color_quinary_meta | color_to_rgb }};
+    --color-scheme-text--overlay: {{ quinary_overlay_color | color_to_rgb }};
+    --color-scheme-accent--overlay: {{ quinary_accent_overlay | color_to_rgb }};
+    --color-scheme-text-placeholder: {{ settings.color_quinary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
+    --color-scheme-background-0: {{ settings.color_quinary_background | color_to_rgb | color_modify: 'alpha', 0 }};
+    --payment-terms-background-color: {{ settings.color_quinary_background }};
   }
 
   [data-color-scheme="white"] {
