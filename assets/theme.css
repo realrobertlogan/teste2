@@ -1036,6 +1036,10 @@
   padding: 1rem;
 }
 
+.p-6{
+  padding: 1.5rem;
+}
+
 .p-8{
   padding: 2rem;
 }
@@ -1120,6 +1124,10 @@
 
 .pb-0{
   padding-bottom: 0px;
+}
+
+.pb-1\/5{
+  padding-bottom: 20%;
 }
 
 .pt-1{
@@ -4063,4 +4071,12 @@ header[data-color-scheme="header"] .logo-image {
 
 .journal-font {
   font-family: "Digestive";
+}
+
+.text-scheme-text *::placeholder {
+  color: var(--color-scheme-text);
+}
+
+.border-none {
+  border: none;
 }
