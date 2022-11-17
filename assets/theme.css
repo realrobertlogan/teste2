@@ -4080,3 +4080,7 @@ header[data-color-scheme="header"] .logo-image {
 .border-none {
   border: none;
 }
+
+.fill-scheme-text svg path {
+  fill: var(--color-scheme-text);
+}

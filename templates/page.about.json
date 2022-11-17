@@ -19,9 +19,24 @@
         "color_scheme": "quaternary",
         "override_header_footer_color_scheme": true
       }
+    },
+    "33f28e25-6d04-4ce0-a44f-5e2ce3e9d80d": {
+      "type": "marquee",
+      "settings": {
+        "text": "Ziggi Zuver is committed to sustainable practices with a conscious approach to designing, making, collaborating and distributing.  Ge.LABEL is committed to su",
+        "repeat_text": true,
+        "link": "",
+        "text_size": "text-2xl lg:text-3xl",
+        "font": "heading",
+        "speed": 150,
+        "direction": "",
+        "color_scheme": "secondary",
+        "is_border": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "33f28e25-6d04-4ce0-a44f-5e2ce3e9d80d"
   ]
 }

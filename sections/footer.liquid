@@ -66,15 +66,16 @@
       {% endcomment %}
       <div class="{{ desktop_col_span }} section-x-padding py-theme bg-scheme-background text-scheme-text">
         <div class="h1">
-          <a href="{{ routes.root_url }}" class="footer-logo-image break-words">
-            {% if section.settings.logo != blank %}
+          <a href="{{ routes.root_url }}" class="footer-logo-image break-words fill-scheme-text">
+            {% render 'logo' %}
+            {% comment %} {% if section.settings.logo != blank %}
               {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
               <img src="{{ section.settings.logo | img_url: image_size }}"
                   srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x, {{ section.settings.logo | img_url: image_size, scale: 3 }} 3x"
                   alt="{{ section.settings.logo.alt | default: shop.name }}">
             {% else %}
               {{ shop.name }}
-            {% endif %}
+            {% endif %} {% endcomment %}
           </a>
         </div>
       </div>

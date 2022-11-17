@@ -504,6 +504,7 @@
     --payment-terms-background-color: {{ settings.color_tertiary_background }};
   }
   [data-color-scheme="quaternary"] {
+    --color-border: {{ settings.color_quaternary_text | color_to_rgb }};
     --color-scheme-text: {{ settings.color_quaternary_text | color_to_rgb }};
     --color-scheme-background: {{ settings.color_quaternary_background | color_to_rgb }};
     --color-scheme-accent: {{ settings.color_quaternary_accent | color_to_rgb }};
@@ -516,6 +517,7 @@
   }
 
   [data-color-scheme="quinary"] {
+    --color-border: {{ settings.color_quinary_text | color_to_rgb }};
     --color-scheme-text: {{ settings.color_quinary_text | color_to_rgb }};
     --color-scheme-background: {{ settings.color_quinary_background | color_to_rgb }};
     --color-scheme-accent: {{ settings.color_quinary_accent | color_to_rgb }};

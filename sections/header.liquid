@@ -55,8 +55,9 @@
   {% else %}
     <div class="h1">
   {% endif %}
-      <a href="{{ routes.root_url }}" class="inline-block py-2 logo-image break-all">
-        {% if section.settings.logo != blank %}
+      <a href="{{ routes.root_url }}" class="inline-block py-2 logo-image break-all fill-scheme-text">
+        {% render 'logo' %}
+        {% comment %} {% if section.settings.logo != blank %}
           {%- assign logo = section.settings.logo -%}
           {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
           {%- unless overlay_header_without_sticky and section.settings.overlay_logo != blank -%}
@@ -75,7 +76,7 @@
           {%- endif -%}
         {% else %}
           {{ shop.name }}
-        {% endif %}
+        {% endif %} {% endcomment %}
       </a>
   {% if template.name == 'index' %}
     </h1>
