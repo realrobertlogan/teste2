@@ -1,0 +1,140 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{%- assign section_color = section.settings.color_scheme -%}
+<section class="page" data-color-scheme="{{ section_color }}">
+
+  <div class="pb-theme-quadruple pt-4 bg-scheme-background section-x-padding ">
+    <div>
+      <h1 class="font-heading {{ settings.template_heading_size }} capitalize">{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <div class="section-x-padding">
+    {%- for block in section.blocks -%}
+      {% render 'product-block-collapsible-tab',
+        block: block
+      %}
+    {%- endfor -%}
+  </div>
+</section>
+
+{%- if section.settings.override_header_footer_color_scheme -%}
+  {%- render 'header-footer-color-scheme-override', section_color: section_color -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Pages - contact",
+  "settings": [
+    {
+      "type":      "header",
+      "content":   "Color"
+    },
+    {
+       "type": "select",
+       "id": "color_scheme",
+       "label": "Color scheme",
+       "options": [
+          { "value": "primary", "label": "Primary"},
+          { "value": "secondary", "label": "Secondary"},
+          { "value": "tertiary", "label": "Tertiary"},
+          { "value": "quaternary", "label": "Quaternary"},
+          { "value": "quinary", "label": "Quinary"}
+       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "override_header_footer_color_scheme",
+      "label": "Use this color scheme for header and footer",
+      "info": "This will only apply to the contact page template",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_tab",
+      "name": "Collapsible tab",
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Section area",
+          "options": [
+             { "value": "product_form", "label": "Product form"},
+             { "value": "product_description", "label": "Description"},
+             { "value": "product_extra", "label": "Extra information"}
+          ],
+          "default":   "product_extra"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible tab",
+          "label": "Heading",
+          "info": "Include a heading that expands the content"
+        },
+        {
+          "type": "select",
+          "id": "heading_text_style",
+          "label": "Heading text style",
+          "options": [
+            {
+              "value": "heading",
+              "label": "Heading"
+            },
+            {
+              "value": "body",
+              "label": "Body"
+            }
+          ],
+          "default": "heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Tab content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Tab content from page"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None"},
+            { "value": "box", "label": "Box"},
+            { "value": "chat-bubble", "label": "Chat bubble"},
+            { "value": "check-mark", "label": "Check mark"},
+            { "value": "coat-hanger", "label": "Coat hanger"},
+            { "value": "dryer", "label": "Dryer"},
+            { "value": "eye", "label": "Eye"},
+            { "value": "globe", "label": "Globe"},
+            { "value": "heart", "label": "Heart"},
+            { "value": "iron", "label": "Iron"},
+            { "value": "leaf", "label": "Leaf"},
+            { "value": "leather", "label": "Leather"},
+            { "value": "like", "label": "Like"},
+            { "value": "lock", "label": "Lock"},
+            { "value": "map-pin", "label": "Map pin"},
+            { "value": "pants", "label": "Pants"},
+            { "value": "person", "label": "Person"},
+            { "value": "plane", "label": "Plane"},
+            { "value": "price-tag", "label": "Price tag"},
+            { "value": "question-mark", "label": "Question mark"},
+            { "value": "return", "label": "Return"},
+            { "value": "ruler", "label": "Ruler"},
+            { "value": "shirt", "label": "Shirt"},
+            { "value": "shoe", "label": "Shoe"},
+            { "value": "star", "label": "Star"},
+            { "value": "truck", "label": "Truck"},
+            { "value": "washing", "label": "Washing"}
+          ],
+          "default":   "none"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

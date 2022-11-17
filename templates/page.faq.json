@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-faq",
+      "blocks": {
+        "b114a133-b907-421e-a812-3288f1d11eba": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_extra",
+            "heading": "HOW DO I MAKE SURE I ORDER THE RIGHT SIZE HAT?",
+            "heading_text_style": "body",
+            "content": "<p>We strongly recommend each customer measures their head before purchasing their new hat to ensure they’re selecting the correct size. Just like shoe and clothing sizes, everyone has a unique head shape and size, which is why we offer a range of sizing opti<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "92592184-586d-4cd1-aa88-100f26a29839": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_extra",
+            "heading": "HOW DO I MAKE SURE I ORDER THE RIGHT SIZE HAT?",
+            "heading_text_style": "body",
+            "content": "<p>We strongly recommend each customer measures their head before purchasing their new hat to ensure they’re selecting the correct size. Just like shoe and clothing sizes, everyone has a unique head shape and size, which is why we offer a range of sizing opti<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "293e1919-3643-4ba8-be0a-5a567fe24d57": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_extra",
+            "heading": "HOW DO I MAKE SURE I ORDER THE RIGHT SIZE HAT?",
+            "heading_text_style": "body",
+            "content": "<p>We strongly recommend each customer measures their head before purchasing their new hat to ensure they’re selecting the correct size. Just like shoe and clothing sizes, everyone has a unique head shape and size, which is why we offer a range of sizing opti<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "b114a133-b907-421e-a812-3288f1d11eba",
+        "92592184-586d-4cd1-aa88-100f26a29839",
+        "293e1919-3643-4ba8-be0a-5a567fe24d57"
+      ],
+      "settings": {
+        "color_scheme": "quinary",
+        "override_header_footer_color_scheme": true
+      }
+    },
+    "6ed94834-7cdc-4559-8087-f11e8ae0c6c7": {
+      "type": "marquee",
+      "settings": {
+        "text": "Ziggi Zuver is committed to sustainable practices with a conscious approach to designing, making, collaborating and distributing.  Ge.LABEL is committed to su",
+        "repeat_text": true,
+        "link": "",
+        "text_size": "text-2xl lg:text-3xl",
+        "font": "heading",
+        "speed": 150,
+        "direction": "",
+        "color_scheme": "secondary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6ed94834-7cdc-4559-8087-f11e8ae0c6c7"
+  ]
+}

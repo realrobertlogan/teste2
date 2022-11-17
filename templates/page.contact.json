@@ -3,12 +3,28 @@
     "main": {
       "type": "main-page-contact",
       "settings": {
+        "image": "shopify:\/\/shop_images\/ZZ_Photoshoot_I_b76c1408-4019-443f-aeb6-372ec1edb2eb.png",
+        "text": "<p>For all customer service and wholesale inquiries, please contact info@fmillerskincare.com<br\/><br\/>For all press inquiries, please contact press@fmillerskincare.com<br\/><br\/>Follow F. MILLER on <br\/>Instagram<br\/>Pinterest<br\/>Facebook<\/p>",
         "color_scheme": "quinary",
         "override_header_footer_color_scheme": true
+      }
+    },
+    "ad736500-7c76-4467-8cbc-d8acfec7fce0": {
+      "type": "marquee",
+      "settings": {
+        "text": "Ziggi Zuver is committed to sustainable practices with a conscious approach to designing, making, collaborating and distributing.  Ge.LABEL is committed to su",
+        "repeat_text": true,
+        "link": "",
+        "text_size": "text-2xl lg:text-3xl",
+        "font": "heading",
+        "speed": 150,
+        "direction": "",
+        "color_scheme": "secondary"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "ad736500-7c76-4467-8cbc-d8acfec7fce0"
   ]
 }
