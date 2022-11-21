@@ -89,8 +89,9 @@
     {%- endif -%}
 
     <div class="text-center w-full">
-      {%- if section.settings.title != blank -%}
-        <h2 class="font-heading text-2xl lg:text-10xl mb-theme journal-font">{{ section.settings.title }}</h2>
+      {%- assign title = section.settings.title | downcase %}
+      {%- if title != blank -%}
+        <h2 class="font-heading text-2xl lg:text-10xl mb-theme {% if title == 'journal' %}journal-font{% endif %}">{{ title }}</h2>
       {%- endif -%}
 
       {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
