@@ -16,7 +16,7 @@
       aria-labelledby="CartTitle">
     <div class="top-0 relative flex items-center justify-between py-8 section-x-padding bg-scheme-background border-b-grid border-grid-color">
       <h1 id="CartTitle" class="text-lg capitalize" tabindex="-1">
-        {{ 'cart.general.title' | t }}(<span x-text="$store.cartCount.countWithText()"></span>)
+        {{ 'cart.general.title' | t }} (<span x-text="$store.cartCount.countWithText()"></span>)
       </h1>
       <button @click.prevent="$store.drawer.cartDrawerOpen = false" class="block text-lg h-5 top-0">
         <span class="visually-hidden">{{ 'general.accessibility.close_modal' | t }}</span>

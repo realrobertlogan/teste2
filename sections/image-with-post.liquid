@@ -91,7 +91,7 @@
     <div class="text-center w-full">
       {%- assign title = section.settings.title | downcase %}
       {%- if title != blank -%}
-        <h2 class="font-heading text-2xl lg:text-10xl mb-theme {% if title == 'journal' %}journal-font{% endif %}">{{ title }}</h2>
+        <h2 class="font-heading text-2xl mb-theme {% if title == 'journal' %}journal-font lg:text-10xl{% else %} lg:text-7xl{% endif %}">{{ title }}</h2>
       {%- endif -%}
 
       {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}

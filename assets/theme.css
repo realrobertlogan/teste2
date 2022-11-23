@@ -841,6 +841,10 @@
   margin-top: -1rem;
 }
 
+.-mt-8{
+  margin-top: -2rem;
+}
+
 .-ml-4{
   margin-left: -1rem;
 }
@@ -3086,7 +3090,7 @@ shopify-payment-terms {
   }
 }
 
-[data-color-scheme=primary] .bg-scheme-background :focus,
+/* [data-color-scheme=primary] .bg-scheme-background :focus,
 [data-color-scheme=secondary] .bg-scheme-background :focus,
 [data-color-scheme=tertiary] .bg-scheme-background :focus,
 [data-color-scheme=quaternary] .bg-scheme-background :focus,
@@ -3104,7 +3108,7 @@ shopify-payment-terms {
   outline-style: solid;
   outline-color: var(--color-scheme-accent);
   outline-offset: 0.25rem;
-}
+} */
 
 [data-color-scheme=primary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=secondary] .bg-scheme-background .increase-target:focus::before,
