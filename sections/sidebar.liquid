@@ -77,7 +77,7 @@
       <ul>
         {%- for link in linklists[section.settings.menu].links -%}
           {%- capture link_class -%}inline-block py-4 w-full {{ section.settings.text_size }}{%- endcapture -%}
-          <li class="no-js-focus-wrapper relative lg:px-8 section-x-padding {% if show_borders %}border-t-grid border-grid-color{% endif %}">
+          <li class="no-js-focus-wrapper relative px-8 {% if show_borders %}border-t-grid border-grid-color{% endif %}">
             {%- if link.links != blank -%}
               {%- capture child_link_class -%}inline-block py-1{%- endcapture -%}
               <button data-accordion

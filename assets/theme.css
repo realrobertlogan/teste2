@@ -644,6 +644,16 @@
   line-height: var(--base-line-height);
 }
 
+.text-6xl{
+  font-size: 4.768rem;
+  line-height: 1;
+}
+
+.text-7xl{
+  font-size: 5.96rem;
+  line-height: 1;
+}
+
 .list-none{
   list-style-type: none;
 }
@@ -689,6 +699,11 @@
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-32{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .my-auto{

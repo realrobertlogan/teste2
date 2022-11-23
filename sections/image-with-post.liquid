@@ -55,7 +55,7 @@
     </div> {% endcomment %}
     <div class="group block h-full">
       {%- if section.settings.article.image != blank -%}
-        <div class="full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-grid border-grid-color{% else %}pt-2 lg:pt-4 lg:px-4 px-8 lg:px-4{% endif %}">
+        <div class="full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-grid border-grid-color{% else %}pt-2 lg:pt-4 lg:px-4 section-x-padding{% endif %}">
           <div class="relative">
             {% render 'image-crop' with
               image: section.settings.article.image,
@@ -65,7 +65,7 @@
         </div>
       {%- endif -%}
 
-      <div class="py-theme px-8 lg:px-4">
+      <div class="py-theme section-x-padding lg:px-4">
         <p class="mt-4 mb-2 text-lg">
           {{ section.settings.article.published_at | time_tag: format: 'month_day_year' }}
         </p>
@@ -82,16 +82,16 @@
     </div>
   </div>
 
-  <div class="order-0 lg:order-1 {{ text_width_desktop }} bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-theme flex {{ text_position }} flex-col justify-between" data-color-scheme="{{ section_color }}">
+  <div class="order-0 lg:order-1 {{ text_width_desktop }} section-x-padding bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-theme flex {{ text_position }} flex-col justify-between" data-color-scheme="{{ section_color }}">
     {% comment %} <div class="{{ text_align }} break-words w-full"> {% endcomment %}
     {%- if section.settings.subtitle != blank -%}
       <p class="font-heading {{ settings.secondary_heading_size }} featured">{{ section.settings.subtitle }}</p>
     {%- endif -%}
 
-    <div class="text-center w-full">
+    <div class="text-center w-full my-32 lg:my-4">
       {%- assign title = section.settings.title | downcase %}
       {%- if title != blank -%}
-        <h2 class="font-heading text-2xl mb-theme {% if title == 'journal' %}journal-font lg:text-10xl{% else %} lg:text-7xl{% endif %}">{{ title }}</h2>
+        <h2 class="font-heading text-7xl mb-4 {% if title == 'journal' %}journal-font lg:text-10xl{% else %} lg:text-7xl{% endif %}">{{ title }}</h2>
       {%- endif -%}
 
       {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
