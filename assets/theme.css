@@ -3569,8 +3569,13 @@ shopify-payment-terms {
     line-height: 1;
   }
 
-  .lg\:text-10xl{
-    font-size: 10rem;
+  .lg\:text-8xl{
+    font-size: 6.56rem;
+    line-height: 1;
+  }
+
+  .lg\:text-11xl{
+    font-size: 11rem;
     line-height: 1;
   }
 
@@ -4119,4 +4124,20 @@ header[data-color-scheme="header"] .logo-image {
 
 .fill-scheme-text svg path {
   fill: var(--color-scheme-text);
+}
+
+.watermark {
+  transform: scale(1, 2.5);
+  /* color: rgba(255, 255, 255, 0.4); */
+  font-size: 16vw;
+}
+
+.splide__slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }

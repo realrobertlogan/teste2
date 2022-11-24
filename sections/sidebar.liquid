@@ -67,7 +67,7 @@
     aria-modal="true"
     data-menu-drawer>
     <div class="js-enabled top-0 relative flex items-center justify-start py-4 section-x-padding bg-scheme-background {% unless show_borders %}border-b-grid border-grid-color{% endunless %}">
-      <button @click.prevent="$store.drawer.menuDrawerOpen = false" class="block w-5 h-5 top-0 capitalize">
+      <button @click.prevent="$store.drawer.menuDrawerOpen = false" class="block h-5 top-0 capitalize">
         <span class="visually-hidden">{{ 'general.accessibility.close_modal' | t }}</span>
         {% comment %} {% render 'icon-close' %} {% endcomment %}close
       </button>

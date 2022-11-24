@@ -50,7 +50,13 @@
               assign img_width = 'lg:w-full'
             endif
           -%}
-          <div class="splide__slide flex" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+          <div class="splide__slide flex relative" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            <h1 id="block--{{ block.id }}" class="font-heading absolute bottom-0 left-0 w-full text-center z-10 watermark">ziggi zuver</h1>
+            <style>
+              #block--{{ block.id }}.watermark {
+                color: {{ block.settings.watermark_color | color_to_rgb | color_modify: 'alpha', 0.3 }};
+              }
+            </style>
             {%- if image_left -%}
               <div class="{{ img_width }} slide__wrapper {% if show_on_mobile == 'left' %}w-full{% endif %}" style="background-color: {{ indent_color_left }}">
                 {%- render 'image-with-text-overlay',
@@ -382,6 +388,12 @@
               { "value": "black", "label": "Black"}
           ],
           "default":   "primary"
+        },
+        {
+          "type": "color",
+          "id": "watermark_color",
+          "label": "Watermark Color",
+          "default": "#ffffff"
         },
         {
           "type":      "header",

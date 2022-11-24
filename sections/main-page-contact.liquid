@@ -28,7 +28,7 @@
     </div>
 
     <div class="text-scheme-text bg-scheme-background text-2xl">
-      <div class="p-6 pb-1/5">
+      <div class="p-6 pb-1/5 section-x-padding">
         {{ section.settings.text }}
       </div>
       {%- assign formId = 'ContactForm' -%}
@@ -38,7 +38,7 @@
         <label class="block" for="ContactFormName"></label>
         <input type="text"
           placeholder="{{ 'contact.form.name' | t }}"
-          class="w-full p-6 py-4 bg-transparent border-b-text border-current"
+          class="w-full section-x-padding py-4 bg-transparent border-b-text border-current"
           name="contact[name]"
           id="ContactFormName"
           value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
@@ -50,7 +50,7 @@
           placeholder="{{ 'contact.form.email' | t }}"
           name="contact[email]"
           id="ContactFormEmail"
-          class="w-full p-6 py-4 bg-transparent border-b-text border-current {% if form.errors contains 'email' %}border-theme-color{% endif %}"
+          class="w-full section-x-padding py-4 bg-transparent border-b-text border-current {% if form.errors contains 'email' %}border-theme-color{% endif %}"
           value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
           spellcheck="false"
           autocomplete="off"
@@ -63,7 +63,7 @@
           placeholder="{{ 'contact.form.phone' | t }}"
           name="contact[phone]"
           id="ContactFormPhone"
-          class="w-full p-6 py-4 bg-transparent border-b-text border-current"
+          class="w-full section-x-padding py-4 bg-transparent border-b-text border-current"
           value="{% if form[phone] %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
           pattern="[0-9\-]*">
 
@@ -74,13 +74,13 @@
           id="ContactFormMessage"
           required
           aria-required="true"
-          class="block p-6 py-4 w-full bg-transparent border-b-text border-current">
+          class="block section-x-padding py-4 w-full bg-transparent border-b-text border-current">
           {%- if form.body -%}
             {{- form.body -}}
           {%- endif -%}
         </textarea>
 
-        <input type="submit" class="cursor-pointer text-left p-6 py-4 w-full {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} border-none" value="{{ 'contact.form.submit' | t }}">
+        <input type="submit" class="cursor-pointer text-left section-x-padding py-4 w-full {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} border-none" value="{{ 'contact.form.submit' | t }}">
       {% endform %}
     </div>
   </div>
