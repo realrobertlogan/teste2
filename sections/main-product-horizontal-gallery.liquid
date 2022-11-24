@@ -46,7 +46,7 @@
     <div class="grid lg:grid-cols-12 lg:col-start-7 lg:col-end-13 gap-gutter bg-border grid-flow-row-dense">
       <div class="lg:col-start-1 lg:col-end-9 bg-scheme-background text-scheme-text h-full section-x-padding border-b-grid border-grid-color">
         <div class="py-theme product-block-area h-full flex justify-between flex-col">
-          <div class="pt-theme-quadruple">
+          <div class="lg:pt-theme-quadruple">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
           {%- assign tab_counter = 0 -%}
           {%- for block in section.blocks -%}
@@ -398,7 +398,7 @@
             {%- endif -%}
           {%- endfor -%}
           </div>
-          <div>
+          <div class="mt-16 lg:mt-0">
             {%- for block in section.blocks -%}
               {%- if block.type == 'collapsible_tab' -%}
                 {% render 'product-block-collapsible-tab',

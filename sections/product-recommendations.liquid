@@ -28,7 +28,7 @@
       <div class="product-recommendations" data-color-scheme="{{ section_color }}">
         <div class="product-recommendations-container border-t-grid border-grid-color">
           <ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter z-10">
-            <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text border-r-grid border-grid-color">
+            <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text pb-16 lg:pb-0 lg:border-r-grid lg:border-0 border-b-grid border-grid-color">
               {% if section.settings.product_recommendations_heading != '' %}
                 <div class="py-4 section-x-padding">
                   <p class="featured text-2xl">{{ section.settings.product_recommendations_heading }}
@@ -37,7 +37,7 @@
             </li>
             {%- for product in recommendations.products -%}
               {%- assign counter = counter | plus: 1 -%}
-              <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text  border-r-grid border-grid-color">
+              <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text lg:border-r-grid lg:border-0 border-b-grid border-grid-color">
                 {%- render 'product-grid-item',
                     product: product,
                     section_color: section_color,
