@@ -20,6 +20,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#ffffff",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -42,6 +43,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#060d49",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -63,6 +65,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#605d5d",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -85,6 +88,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#ffffff",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -106,6 +110,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#251000",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -128,6 +133,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#000000",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -149,6 +155,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#464646",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -171,6 +178,7 @@
             "content_position": "justify-center items-center text-center",
             "content_width_desktop": "lg:w-2\/3",
             "text_color": "primary",
+            "watermark_color": "#464646",
             "cta_link": "",
             "cta_text": "",
             "cta_style": "link"
@@ -313,7 +321,8 @@
         "font": "heading",
         "speed": 150,
         "direction": "",
-        "color_scheme": "tertiary"
+        "color_scheme": "tertiary",
+        "is_border": true
       }
     }
   },

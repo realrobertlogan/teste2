@@ -4126,12 +4126,6 @@ header[data-color-scheme="header"] .logo-image {
   fill: var(--color-scheme-text);
 }
 
-.watermark {
-  transform: scale(1, 2.5);
-  /* color: rgba(255, 255, 255, 0.4); */
-  font-size: 16vw;
-}
-
 .splide__slide::after {
   content: '';
   position: absolute;

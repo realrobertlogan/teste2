@@ -51,10 +51,10 @@
             endif
           -%}
           <div class="splide__slide flex relative" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
-            <h1 id="block--{{ block.id }}" class="font-heading absolute bottom-0 left-0 w-full text-center z-10 watermark">ziggi zuver</h1>
+            <h1 id="block--{{ block.id }}" class="font-heading absolute bottom-0 left-0 w-full text-center z-10 watermark">{% render 'logo' %}</h1>
             <style>
-              #block--{{ block.id }}.watermark {
-                color: {{ block.settings.watermark_color | color_to_rgb | color_modify: 'alpha', 0.3 }};
+              #block--{{ block.id }}.watermark path {
+                fill: {{ block.settings.watermark_color | color_to_rgb | color_modify: 'alpha', 0.3 }};
               }
             </style>
             {%- if image_left -%}
