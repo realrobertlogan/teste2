@@ -98,7 +98,84 @@
 {% endif %}
 
 <article class="article text-scheme-text bg-scheme-background" data-color-scheme="{{ section_color }}">
-  <div class="grid grid-cols-1 lg:grid-cols-12  bg-border gap-gutter">
+  <div class="pb-theme-quadruple pt-4 bg-scheme-background section-x-padding ">
+    <div>
+      <h1 class="font-heading {{ settings.template_heading_size }} capitalize">{{ blog.title }}</h1>
+    </div>
+  </div>
+
+  <div class="bg-border relative grid lg:grid-cols-12 grid-flow-row-dense lg:bg-border gap-gutter overflow-hidden border-t-grid border-grid-color border-b-grid">
+    {%- if article.image != blank -%}
+      <div class="order-1 lg:col-start-7 lg:col-end-13 relative full-h bg-scheme-background {% if indent_image %}p-1/8{% endif %} {% unless settings.fill_image_to_border_edge %} flex items-center{% endunless %}">
+        {% render 'image-crop' with
+          image: article.image,
+          ratio: ratio,
+          crop: section.settings.crop
+        %}
+      </div>
+    {%- endif -%}
+    <div class="order-0 lg:col-span-6 bg-scheme-background text-scheme-text section-x-padding py-theme lg:flex {{ section.settings.feature_content_position }}  {% if article.image == blank %}col-span-2{% endif %}  overflow-hidden">
+      <div class="h-full flex flex-col justify-between w-full">
+        <div>
+          {%- if show_date -%}
+            <p class="featured-sm mt-2 text-2xl">
+              {{ article.published_at | time_tag: format: 'month_day_year' }}
+            </p>
+          {%- endif -%}
+
+          <h2 class="font-heading {{ settings.base_heading_size }} text-3xl break-words">{{ article.title }}</h2>
+        </div>
+        {% comment %} 
+        {%- if show_author -%}
+          <p class="mt-2">{{ 'blogs.article.by_author' | t: author: article.author }}</p>
+        {%- endif -%} {% endcomment %}
+      
+        <div class="text-center p-1/5 lg:p-4">
+          {% if show_link %}
+            <a class="border-scheme-accent border-grid py-4 px-12 hover:text-scheme-accent text-base align-top inline-flex items-center justify-center {% if settings.links_show_underline %}border-b-text border-scheme-text hover:border-scheme-accent pb-1{% endif %}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                <span class="{% if settings.links_uppercase %}uppercase{% endif %}">{{ 'blogs.article.read_more' | t }} {% if settings.links_show_arrow %}&rarr;{% endif %}</span>
+            </a>
+          {%- endif -%}
+        </div>
+
+        <div class="rte mt-4 text-2xl">
+          {%- if article.excerpt.size > 0 %}
+            {{ article.excerpt }}
+          {%- else -%}
+            {{ article.content | strip_html | truncate: 150 }}
+          {%- endif -%}
+        </div>
+
+        {% if article.tags.size > 0 and show_tags %}
+          <div class="mt-4">
+            <ul class="m-0 p-0 -mx-1" aria-label="{{ 'blogs.article.tags' | t }}">
+              {% for tag in article.tags %}
+                <li class="inline-block px-1">
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">#{{ tag }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if blog.comments_enabled? and article.comments_count > 0 %}
+        <ul class="mt-4">
+          <li>
+            <a href="{{ article.url }}#comments">
+              {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+            </a>
+          </li>
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="rte my-6 section-x-padding">
+    {{ article.content }}
+  </div>
+
+  {% comment %} <div class="grid grid-cols-1 lg:grid-cols-12  bg-border gap-gutter">
     {%- if article.image != blank -%}
     <div class="lg:col-span-12 relative full-h bg-scheme-background {%comment%}{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}{%endcomment%} {% unless image_width_desktop == 'full' %}lg:hidden{% endunless %}">
       <div class="relative {% if indent_image %}p-8 lg:p-16{% endif %}">
@@ -238,7 +315,7 @@
         {% endif %}
       {% endif %}
     {% endif %}
-  </div>
+  </div> {% endcomment %}
 </article>
 
 {%- if section.settings.override_header_footer_color_scheme -%}
@@ -315,42 +392,6 @@
         "default": "2.39"
       },
       {
-        "type": "select",
-        "id": "image_width_desktop",
-        "label": "Image width on desktop",
-        "options": [
-          {
-            "value": "full",
-            "label": "Full"
-          },
-          {
-            "value": "one_half",
-            "label": "One half"
-          },
-          {
-            "value": "one_third",
-            "label": "One third"
-          }
-        ],
-        "default": "full"
-      },
-      {
-        "type": "checkbox",
-        "id": "center_content",
-        "label": "Center content",
-        "default": false
-      },
-      {
-        "type": "select",
-        "id": "content_width",
-        "label": "Desktop content width",
-        "options": [
-          { "value": "lg:w-1/2", "label": "One half"},
-          { "value": "lg:w-2/3", "label": "Two thirds"}
-        ],
-        "info": "This will only apply when Image width on desktop setting set to full and Center content setting is enabled."
-      },
-      {
         "type": "checkbox",
         "id": "indent_image",
         "label": "Indent image",
@@ -398,7 +439,9 @@
            { "value": "primary", "label": "Primary"},
            { "value": "secondary", "label": "Secondary"},
            { "value": "tertiary", "label": "Tertiary"},
-           { "value": "quaternary", "label": "Quaternary"}
+           { "value": "quaternary", "label": "Quaternary"},
+           { "value": "quinary", "label": "Quinary"},
+           { "value": "senary", "label": "Senary"}
         ]
       },
       {

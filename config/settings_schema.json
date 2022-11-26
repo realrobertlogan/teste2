@@ -182,6 +182,38 @@
       },
       {
         "type": "header",
+        "content": "Senary color scheme"
+      },
+      {
+        "type": "paragraph",
+        "content": "Available as an option for blocks, sections and page templates."
+      },
+      {
+        "type": "color",
+        "id": "color_senary_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_senary_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_senary_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_senary_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
         "content": "Buttons"
       },
       {

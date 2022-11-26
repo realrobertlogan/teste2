@@ -407,6 +407,19 @@
     --color-quinary-text-placeholder: {{ settings.color_quinary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
     --color-quinary-background-0: {{ settings.color_quinary_background | color_to_rgb | color_modify: 'alpha', 0 }};
 
+    /*
+    senar color scheme
+    */
+    --color-senary-accent: {{ settings.color_senary_accent | color_to_rgb }};
+    --color-senary-text: {{ settings.color_senary_text | color_to_rgb }};
+    --color-senary-background: {{ settings.color_senary_background | color_to_rgb }};
+    --color-senary-background-hex: {{ settings.color_senary_background }};
+    --color-senary-meta: {{ settings.color_senary_meta | color_to_rgb }};
+    --color-senary-text--overlay: {{ senary_overlay_color | color_to_rgb }};
+    --color-senary-accent--overlay: {{ senary_accent_overlay | color_to_rgb }};
+    --color-senary-text-placeholder: {{ settings.color_senary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
+    --color-senary-background-0: {{ settings.color_senary_background | color_to_rgb | color_modify: 'alpha', 0 }};
+
     --white-text--overlay: {{ white_text_overlay_color | color_to_rgb }};
     --black-text--overlay: {{ black_text_overlay_color | color_to_rgb }};
 
@@ -527,6 +540,19 @@
     --color-scheme-text-placeholder: {{ settings.color_quinary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
     --color-scheme-background-0: {{ settings.color_quinary_background | color_to_rgb | color_modify: 'alpha', 0 }};
     --payment-terms-background-color: {{ settings.color_quinary_background }};
+  }
+
+  [data-color-scheme="senary"] {
+    --color-border: {{ settings.color_senary_text | color_to_rgb }};
+    --color-scheme-text: {{ settings.color_senary_text | color_to_rgb }};
+    --color-scheme-background: {{ settings.color_senary_background | color_to_rgb }};
+    --color-scheme-accent: {{ settings.color_senary_accent | color_to_rgb }};
+    --color-scheme-meta: {{ settings.color_senary_meta | color_to_rgb }};
+    --color-scheme-text--overlay: {{ senary_overlay_color | color_to_rgb }};
+    --color-scheme-accent--overlay: {{ senary_accent_overlay | color_to_rgb }};
+    --color-scheme-text-placeholder: {{ settings.color_senary_text | color_to_rgb | color_modify: 'alpha', 0.1 }};
+    --color-scheme-background-0: {{ settings.color_senary_background | color_to_rgb | color_modify: 'alpha', 0 }};
+    --payment-terms-background-color: {{ settings.color_senary_background }};
   }
 
   [data-color-scheme="white"] {

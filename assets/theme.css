@@ -644,6 +644,11 @@
   line-height: var(--base-line-height);
 }
 
+.text-3xl{
+  font-size: 2.441rem;
+  line-height: var(--base-line-height);
+}
+
 .text-6xl{
   font-size: 4.768rem;
   line-height: 1;
@@ -1988,6 +1993,10 @@ body {
   background-color: var(--color-scheme-text);
 }
 
+[data-color-scheme=senary] .responsive-image-placeholder {
+  background-color: var(--color-scheme-text);
+}
+
 .no-js .responsive-image-placeholder {
   display: none;
 }
@@ -2014,6 +2023,11 @@ body {
 
 [data-color-scheme=quinary].bg-scheme-background .bg-placeholder-bg,
 [data-color-scheme=quinary] .bg-scheme-background .bg-placeholder-bg {
+  background-color: var(--color-scheme-text-placeholder);
+}
+
+[data-color-scheme=senary].bg-scheme-background .bg-placeholder-bg,
+[data-color-scheme=senary] .bg-scheme-background .bg-placeholder-bg {
   background-color: var(--color-scheme-text-placeholder);
 }
 
@@ -2247,6 +2261,11 @@ option {
 [data-color-scheme=quinary] select.text-scheme-text,
 [data-color-scheme=quinary] select.text-scheme-text {
   background-image: var(--icon-svg-select-quinary);
+}
+
+[data-color-scheme=senary] select.text-scheme-text,
+[data-color-scheme=senary] select.text-scheme-text {
+  background-image: var(--icon-svg-select-senary);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -2503,6 +2522,9 @@ button span {
 [data-color-scheme=quinary].text-scheme-text .rte a:hover,
 [data-color-scheme=quinary] .text-scheme-text.rte a:hover,
 [data-color-scheme=quinary].text-scheme-text.rte a:hover,
+[data-color-scheme=senary].text-scheme-text .rte a:hover,
+[data-color-scheme=senary] .text-scheme-text.rte a:hover,
+[data-color-scheme=senary].text-scheme-text.rte a:hover,
 [data-color-scheme=tertiary].text-scheme-text .rte a:hover,
 [data-color-scheme=tertiary] .text-scheme-text.rte a:hover,
 [data-color-scheme=tertiary].text-scheme-text.rte a:hover {
@@ -2523,6 +2545,9 @@ button span {
 [data-color-scheme=quinary].text-scheme-text .rte blockquote,
 [data-color-scheme=quinary] .text-scheme-text.rte blockquote,
 [data-color-scheme=quinary].text-scheme-text.rte blockquote,
+[data-color-scheme=senary].text-scheme-text .rte blockquote,
+[data-color-scheme=senary] .text-scheme-text.rte blockquote,
+[data-color-scheme=senary].text-scheme-text.rte blockquote,
 [data-color-scheme=tertiary].text-scheme-text .rte blockquote,
 [data-color-scheme=tertiary] .text-scheme-text.rte blockquote,
 [data-color-scheme=tertiary].text-scheme-text.rte blockquote {
@@ -2815,6 +2840,20 @@ button span {
   color: var(--color-scheme-text);
 }
 
+[data-color-scheme=senary].bg-scheme-background .plyr,
+[data-color-scheme=senary].bg-scheme-background .plyr__control,
+[data-color-scheme=senary] .bg-scheme-background .plyr,
+[data-color-scheme=senary] .bg-scheme-background .plyr__control {
+  background-color: var(--color-scheme-background);
+}
+
+[data-color-scheme=senary].text-scheme-text .plyr,
+[data-color-scheme=senary].text-scheme-text .plyr__control,
+[data-color-scheme=senary] .text-scheme-text .plyr,
+[data-color-scheme=senary] .text-scheme-text .plyr__control {
+  color: var(--color-scheme-text);
+}
+
 [data-shopify-xr-hidden] {
   display: none;
 }
@@ -2947,6 +2986,11 @@ shopify-payment-terms {
 [data-color-scheme=quinary] .product-content-container.bg-scheme-background,
 [data-color-scheme=quinary].product-content-container.bg-scheme-background {
   --payment-terms-background-color: var(--color-quinary-background-hex);
+}
+
+[data-color-scheme=senary] .product-content-container.bg-scheme-background,
+[data-color-scheme=senary].product-content-container.bg-scheme-background {
+  --payment-terms-background-color: var(--color-senary-background-hex);
 }
 
 .shopify-challenge__container {
@@ -3139,6 +3183,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=quaternary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=quinary] .bg-scheme-background .increase-target:focus::before,
+[data-color-scheme=senary] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=header] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=footer] .bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=primary].bg-scheme-background .increase-target:focus::before,
@@ -3146,6 +3191,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=quaternary].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=quinary].bg-scheme-background .increase-target:focus::before,
+[data-color-scheme=senary].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=header].bg-scheme-background .increase-target:focus::before,
 [data-color-scheme=footer].bg-scheme-background .increase-target:focus::before {
   outline: var(--text-width) solid -webkit-focus-ring-color;
@@ -3158,6 +3204,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=quaternary] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=quinary] .bg-scheme-background .custom-input:focus + label,
+[data-color-scheme=senary] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=header] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=footer] .bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=primary].bg-scheme-background .custom-input:focus + label,
@@ -3165,6 +3212,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=quaternary].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=quinary].bg-scheme-background .custom-input:focus + label,
+[data-color-scheme=senary].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=header].bg-scheme-background .custom-input:focus + label,
 [data-color-scheme=footer].bg-scheme-background .custom-input:focus + label {
   outline: var(--text-width) solid -webkit-focus-ring-color;
@@ -3176,6 +3224,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=quaternary] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=quinary] .bg-scheme-background .product-media-object:focus,
+[data-color-scheme=senary] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=header] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=footer] .bg-scheme-background .product-media-object:focus,
 [data-color-scheme=primary].bg-scheme-background .product-media-object:focus,
@@ -3183,6 +3232,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=quaternary].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=quinary].bg-scheme-background .product-media-object:focus,
+[data-color-scheme=senary].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=header].bg-scheme-background .product-media-object:focus,
 [data-color-scheme=footer].bg-scheme-background .product-media-object:focus {
   outline: 0;
@@ -3193,6 +3243,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=quaternary] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=quinary] .bg-scheme-background .product-media-object:focus:after,
+[data-color-scheme=senary] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=header] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=footer] .bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=primary].bg-scheme-background .product-media-object:focus:after,
@@ -3200,6 +3251,7 @@ shopify-payment-terms {
 [data-color-scheme=tertiary].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=quaternary].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=quinary].bg-scheme-background .product-media-object:focus:after,
+[data-color-scheme=senary].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=header].bg-scheme-background .product-media-object:focus:after,
 [data-color-scheme=footer].bg-scheme-background .product-media-object:focus:after {
   width: 100%;
