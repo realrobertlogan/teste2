@@ -659,6 +659,11 @@
   line-height: 1;
 }
 
+.text-8xl{
+  font-size: 7rem;
+  line-height: 1;
+}
+
 .list-none{
   list-style-type: none;
 }
@@ -857,12 +862,20 @@
   margin-bottom: -0.5rem;
 }
 
+.-mb-6{
+  margin-bottom: -1.5rem;
+}
+
 .-ml-2{
   margin-left: -0.5rem;
 }
 
 .-mt-4{
   margin-top: -1rem;
+}
+
+.-mt-6{
+  margin-top: -1.5rem;
 }
 
 .-mt-8{
@@ -3627,7 +3640,7 @@ shopify-payment-terms {
   }
 
   .lg\:text-11xl{
-    font-size: 11rem;
+    font-size: 13rem;
     line-height: 1;
   }
 
@@ -3666,6 +3679,10 @@ shopify-payment-terms {
 
   .lg\:mt-2{
     margin-top: 0.5rem;
+  }
+
+  .lg\:-mb-6{
+    margin-bottom: 1.5rem;
   }
 
   .lg\:-mt-8 {
@@ -3748,6 +3765,11 @@ shopify-payment-terms {
   .lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .lg\:px-0{
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .lg\:px-4{
@@ -4186,4 +4208,8 @@ header[data-color-scheme="header"] .logo-image {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-submit:hover {
+  color: var(--color-scheme-text);
 }

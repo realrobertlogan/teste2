@@ -74,7 +74,7 @@
 
         <div class="mt-4">
           <a class="hover:border-scheme-accent hover:text-scheme-accent px-8 py-2 rounded-full border-text border-scheme-text text-base align-top inline-flex items-center justify-center {% if settings.links_show_underline %}border-b-text border-scheme-text hover:border-scheme-accent pb-1{% endif %}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
-            <span class="{% if settings.links_uppercase %}uppercase{% endif %} capitalize">{{ 'blogs.article.read_more' | t }}{% if settings.links_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+            <span class="{% if settings.links_uppercase %}uppercase{% endif %}">{{ 'blogs.article.read_more' | t }}{% if settings.links_show_arrow %}&nbsp;&rarr;{% endif %}</span>
           </a>
         </div>
 
@@ -82,7 +82,7 @@
     </div>
   </div>
 
-  <div class="order-0 lg:order-1 {{ text_width_desktop }} section-x-padding bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-theme flex {{ text_position }} flex-col justify-between" data-color-scheme="{{ section_color }}">
+  <div class="order-0 lg:order-1 {{ text_width_desktop }} section-x-padding bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-4 flex {{ text_position }} flex-col justify-between" data-color-scheme="{{ section_color }}">
     {% comment %} <div class="{{ text_align }} break-words w-full"> {% endcomment %}
     {%- if section.settings.subtitle != blank -%}
       <p class="font-heading {{ settings.secondary_heading_size }} featured">{{ section.settings.subtitle }}</p>
@@ -91,7 +91,7 @@
     <div class="text-center w-full my-32 lg:my-4">
       {%- assign title = section.settings.title | downcase %}
       {%- if title != blank -%}
-        <h2 class="font-heading text-7xl mb-4 {% if title == 'journal' %}journal-font lg:text-11xl{% else %} lg:text-8xl{% endif %}">{{ title }}</h2>
+        <h2 class="font-heading text-8xl mb-4 {% if title == 'journal' %}journal-font lg:text-11xl{% else %} lg:text-8xl{% endif %}">{{ title }}</h2>
       {%- endif -%}
 
       {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
@@ -105,7 +105,7 @@
             -%}
           {%- when 'button' -%}
             <a href="{{ section.settings.cta_link }}" class="px-8 py-2 rounded-full border-text border-scheme-text inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
-              <span class="{% if settings.button_uppercase %}uppercase{% endif %} capitalize">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+              <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
             </a>
           {%- endcase -%}
         </div>

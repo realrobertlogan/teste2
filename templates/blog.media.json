@@ -32,7 +32,8 @@
         "font": "heading",
         "speed": 150,
         "direction": "",
-        "color_scheme": "secondary"
+        "color_scheme": "secondary",
+        "is_border": false
       }
     }
   },

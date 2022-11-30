@@ -58,7 +58,7 @@
     </div>
   </div>
 
-  <div class="{{ text_width_desktop }} bg-scheme-background text-scheme-text relative section-x-padding py-theme flex {{ text_position }}" data-color-scheme="{{ section_color }}">
+  <div class="{{ text_width_desktop }} bg-scheme-background text-scheme-text relative section-x-padding py-4 flex {{ text_position }}" data-color-scheme="{{ section_color }}">
     <div class="{{ text_align }} break-words w-full">
       {%- if section.settings.subtitle != blank -%}
         <h2 class="font-heading {{ settings.secondary_heading_size }} featured">{{ section.settings.subtitle }}</h2>
@@ -85,7 +85,7 @@
           -%}
         {%- when 'button' -%}
           <a href="{{ section.settings.cta_link }}" class="inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
-            <span class="{% if settings.button_uppercase %}uppercase{% endif %} capitalize">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+            <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
           </a>
         {%- endcase -%}
       </div>

@@ -3,7 +3,7 @@
     "main": {
       "type": "main-article",
       "settings": {
-        "crop": "2.39",
+        "crop": "0",
         "indent_image": true,
         "show_author": false,
         "show_date": true,

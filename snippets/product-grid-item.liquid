@@ -54,7 +54,7 @@
         {% endif %}
         <p  aria-hidden="true" class="font-heading {% if collection.url %}lg:text-6xl {% endif %} text-2xl product-grid-title {% if sold_out %}text-scheme-meta line-through{% endif %}">{{ product.title }}</p>
       </div>
-      <div class="{{ price_class }} rounded-full border-text border-scheme-text hover:text-scheme-accent">
+      <div class="{{ price_class }} rounded-full border-text border-scheme-text hover:text-scheme-accent mb-2">
         {% if sold_out %}
           <s class="text-scheme-meta">{{ 'products.product.sold_out' | t }}</s>
         {% else %}

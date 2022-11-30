@@ -16,8 +16,8 @@
 <section class="bg-scheme-background text-scheme-text blog border-t-grid border-grid-color" data-color-scheme="{{ section_color }}">
 
   {%- if show_title -%}
-  <div class="bg-scheme-background text-scheme-text section-x-padding pt-theme-double pb-theme  border-b-grid border-grid-color flex justify-end">
-    <h1 class="text-center w-11/12 font-heading {{ settings.template_heading_size }} {% if settings.section_title_align == 'center' %}text-center{% endif %}">
+  <div class="bg-scheme-background text-scheme-text section-x-padding pt-theme-double pb-theme  border-b-grid border-grid-color">
+    <h1 class="text-center {% if blog.handle == 'journal' %}journal-font lg:text-7xl{% endif %} font-heading {{ settings.template_heading_size }} {% if settings.section_title_align == 'center' %}text-center{% endif %}">
       {{ blog.title }}
       {% if show_rss %}
       <a href="{{ shop.url }}{{ blog.url }}.atom">
@@ -108,11 +108,11 @@
               %}
             </div>
           {%- endif -%}
-          <div class="order-0 {{ content_width_desktop }} bg-scheme-background text-scheme-text section-x-padding py-theme lg:flex {{ section.settings.feature_content_position }}  {% if article.image == blank %}col-span-2{% endif %}  overflow-hidden">
+          <div class="order-0 {{ content_width_desktop }} bg-scheme-background text-scheme-text section-x-padding py-4 lg:flex {{ section.settings.feature_content_position }}  {% if article.image == blank %}col-span-2{% endif %}  overflow-hidden">
             <div class="h-full flex flex-col justify-between w-full">
               <div>
                 {%- if show_date -%}
-                  <p class="featured-sm mt-2 text-2xl">
+                  <p class="featured text-2xl">
                     {{ article.published_at | time_tag: format: 'month_day_year' }}
                   </p>
                 {%- endif -%}
