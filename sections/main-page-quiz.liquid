@@ -1,0 +1,78 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+<section class="page" data-color-scheme="{{ page.handle }}">
+
+  <div class="py-12 bg-scheme-background section-x-padding overflow-x-hidden">
+    <h1 class="lg:text-11xl text-8xl w-5/4 ml-3/10">{{ section.settings.title }}</h1>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden border-t-grid border-grid-color relative">
+    <div class="bg-scheme-background lg:absolute left-0 top-0 text-2xl p-4 section-x-padding">
+      Pick one
+    </div>
+    <div class="bg-scheme-background lg:col-span-6 lg:text-6xl py-1/8 text-center text-4xl cursor-pointer" id="first-option">
+      <span class="relative {% if section.settings.cut_off_1 %}cut-off{% endif %}">
+        {{ section.settings.option1 }}
+      </span>
+    </div>
+  
+    <div class="lg:col-span-6 bg-scheme-background lg:text-6xl py-1/8 text-center text-4xl cursor-pointer" id="second-option">
+      <span class="relative {% if section.settings.cut_off_2 %}cut-off{% endif %}">
+        {{ section.settings.option2 }}
+      </span>
+    </div>
+  </div>
+</section>
+
+{%- render 'header-footer-color-scheme-override', section_color: page.handle -%}
+
+<script>
+  var step = {{ page.handle | split: 'quiz' | last }}
+      step_ = 'step' + step,
+      page = '/pages/quiz' + (parseInt(step, 10) + 1);
+  window.localStorage.setItem(step, null);
+  document.getElementById('first-option').addEventListener('click', (e) => {
+    window.localStorage.setItem(step, 1);
+    window.location.href = page;
+  });
+
+  document.getElementById('second-option').addEventListener('click', (e) => {
+    window.localStorage.setItem(step, 2);
+    window.location.href = page;
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Pages - contact",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Who is your Alter Ego"
+    },
+    {
+      "type": "text",
+      "id": "option1",
+      "label": "Option1",
+      "default": "Stones"
+    },
+    {
+      "type": "checkbox",
+      "id": "cut_off_1",
+      "label": "Cut off the first letter of option1"
+    },
+    {
+      "type": "text",
+      "id": "option2",
+      "label": "Option2",
+      "default": "Marley"
+    },
+    {
+      "type": "checkbox",
+      "id": "cut_off_2",
+      "label": "Cut off the first letter of option2"
+    }
+  ]
+}
+{% endschema %}

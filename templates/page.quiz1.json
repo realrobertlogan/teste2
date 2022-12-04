@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-quiz",
+      "settings": {
+        "title": "Who is your Alter Ego",
+        "option1": "Stones",
+        "cut_off_1": true,
+        "option2": "Marley",
+        "cut_off_2": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

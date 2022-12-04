@@ -649,6 +649,11 @@
   line-height: var(--base-line-height);
 }
 
+.text-4xl{
+  font-size: 3.052rem;
+  line-height: var(--base-line-height);
+}
+
 .text-6xl{
   font-size: 4.768rem;
   line-height: 1;
@@ -804,6 +809,10 @@
 
 .ml-4{
   margin-left: 1rem;
+}
+
+.ml-3\/10{
+  margin-left: 30%;
 }
 
 .mr-6{
@@ -1061,6 +1070,11 @@
   padding: 12.5%;
 }
 
+.py-1\/8 {
+  padding-top: 12.5%;
+  padding-bottom: 12.5%;
+}
+
 .p-0{
   padding: 0px;
 }
@@ -1141,6 +1155,11 @@
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-10{
@@ -3682,7 +3701,7 @@ shopify-payment-terms {
   }
 
   .lg\:-mb-6{
-    margin-bottom: 1.5rem;
+    margin-bottom: -1.5rem;
   }
 
   .lg\:-mt-8 {
@@ -3739,6 +3758,11 @@ shopify-payment-terms {
 
   .lg\:p-1\/8 {
     padding: 12.5%;
+  }
+
+  .lg\:py-1\/8 {
+    padding-top: 12.5%;
+    padding-bottom: 12.5%;
   }
 
   .lg\:p-0{
@@ -4212,4 +4236,25 @@ header[data-color-scheme="header"] .logo-image {
 
 .contact-submit:hover {
   color: var(--color-scheme-text);
+}
+
+@media screen and (min-width: 1024px) {
+  .cut-off::after {
+    width: 20px;
+  }  
+}
+
+.cut-off::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 12px;
+  z-index: 11;
+  background-color: var(--color-scheme-background);
+}
+
+.w-5\/4 {
+  width: 125%;
 }

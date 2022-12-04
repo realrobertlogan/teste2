@@ -214,6 +214,174 @@
       },
       {
         "type": "header",
+        "content": "Quiz1 color scheme"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz1_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz1_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz1_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz1_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
+        "content": "Quiz2 color scheme"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz2_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz2_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz2_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz2_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
+        "content": "Quiz3 color scheme"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz3_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz3_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz3_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz3_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
+        "content": "Quiz4 color scheme"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz4_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz4_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz4_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz4_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
+        "content": "Quiz5 color scheme"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz5_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz5_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz5_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz5_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
+        "content": "Quiz6 color scheme"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz6_text",
+        "label": "Text",
+        "default": "#162317"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz6_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz6_accent",
+        "label": "Accent",
+        "default": "#EB3131"
+      },
+      {
+        "type": "color",
+        "id": "color_quiz6_meta",
+        "label": "Secondary",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
         "content": "Buttons"
       },
       {
