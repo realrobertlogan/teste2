@@ -514,7 +514,7 @@
   </div>
 
   <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group data-color-scheme="quaternary">
-    <div class="featured absolute left-4 top-4 text-2xl">
+    <div class="featured absolute left-4 top-4 text-2xl inline-block">
       Gallery
     </div>
     <div id="splide" class="p-1/10 splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>

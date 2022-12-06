@@ -29,21 +29,21 @@
   var step = {{ page.handle | split: 'quiz' | last }}
       step_ = 'step' + step,
       page = '/pages/quiz' + (parseInt(step, 10) + 1);
-  window.localStorage.setItem(step, null);
+  window.localStorage.setItem(step_, null);
   document.getElementById('first-option').addEventListener('click', (e) => {
-    window.localStorage.setItem(step, 1);
+    window.localStorage.setItem(step_, 1);
     window.location.href = page;
   });
 
   document.getElementById('second-option').addEventListener('click', (e) => {
-    window.localStorage.setItem(step, 2);
+    window.localStorage.setItem(step_, 2);
     window.location.href = page;
   });
 </script>
 
 {% schema %}
 {
-  "name": "Pages - contact",
+  "name": "Pages - Quiz",
   "settings": [
     {
       "type": "text",
