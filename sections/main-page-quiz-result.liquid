@@ -1,5 +1,7 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-<section class="page" data-color-scheme="{{ page.handle }}">
+
+<section class="page" data-color-scheme="{{ page.handle }}" data-answers="{{ section.settings.answer }}"
+>
 
   <div class="py-12 bg-scheme-background section-x-padding overflow-x-hidden">
     <h1 class="lg:text-11xl text-8xl journal-font text-center">{{ section.settings.title }}</h1>
@@ -11,7 +13,7 @@
     </div>
     <div class="bg-scheme-background lg:col-span-6 py-1/8 px-12 text-center text-3xl relative flex justify-center items-center">
       <span>
-        Your alter ego is ... ...
+        Your alter ego is <span class="text-scheme-accent" data-answer></span>
       </span>
     </div>
   
@@ -84,10 +86,13 @@
       step2 = window.localStorage.getItem('step2'),
       step3 = window.localStorage.getItem('step3'),
       step4 = window.localStorage.getItem('step4'),
-      step5 = window.localStorage.getItem('step5');
+      step5 = window.localStorage.getItem('step5'),
+      answer = (parseInt(step1, 10) - 1) * (parseInt(step2, 10) - 1) * (parseInt(step3, 10) - 1) * (parseInt(step4, 10) - 1) + parseInt(step5, 10),
+      answers = document.querySelector('section.page').dataset.answers.split("#");
   
   console.log(step1+'=>'+step2+'=>'+step3+'=>'+step4+'=>'+step5);
-  
+  document.querySelector('[data-answer]').innerText = answers[answer - 1];
+
 </script>
 
 {% schema %}
@@ -99,6 +104,12 @@
       "id": "title",
       "label": "Title",
       "default": "Who is your Alter Ego"
+    },
+    {
+      "type": "textarea",
+      "id": "answer",
+      "label": "Answer combination",
+      "info": "Separate each answer by #"
     }
   ]
 }
