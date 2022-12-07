@@ -2,21 +2,21 @@
 <section class="page" data-color-scheme="{{ page.handle }}">
 
   <div class="py-12 bg-scheme-background section-x-padding overflow-x-hidden">
-    <h1 class="lg:text-11xl text-8xl w-5/4 ml-3/10">{{ section.settings.title }}</h1>
+    <h1 class="lg:text-11xl text-8xl journal-font text-center">{{ section.settings.title }}</h1>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden border-t-grid border-grid-color relative">
+  <div class="uppercase grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden border-t-grid border-grid-color relative">
     <div class="bg-scheme-background lg:absolute left-0 top-0 text-2xl p-4 section-x-padding">
       Pick one
     </div>
     <div class="bg-scheme-background lg:col-span-6 lg:text-6xl py-1/8 text-center text-4xl cursor-pointer" id="first-option">
-      <span class="relative {% if section.settings.cut_off_1 %}cut-off{% endif %}">
+      <span class="relative">
         {{ section.settings.option1 }}
       </span>
     </div>
   
     <div class="lg:col-span-6 bg-scheme-background lg:text-6xl py-1/8 text-center text-4xl cursor-pointer" id="second-option">
-      <span class="relative {% if section.settings.cut_off_2 %}cut-off{% endif %}">
+      <span class="relative">
         {{ section.settings.option2 }}
       </span>
     </div>
@@ -58,20 +58,10 @@
       "default": "Stones"
     },
     {
-      "type": "checkbox",
-      "id": "cut_off_1",
-      "label": "Cut off the first letter of option1"
-    },
-    {
       "type": "text",
       "id": "option2",
       "label": "Option2",
       "default": "Marley"
-    },
-    {
-      "type": "checkbox",
-      "id": "cut_off_2",
-      "label": "Cut off the first letter of option2"
     }
   ]
 }

@@ -10,7 +10,7 @@
 {% endcomment %}
 
   {%- if form.posted_successfully? -%}
-  <p class="form-message text-scheme-accent py-4"
+  <p class="form-message text-scheme-accent py-4 section-x-padding"
      tabindex="-1"
      data-form-status>
     {{ success_message | default: 'contact.form.post_success' | t }}

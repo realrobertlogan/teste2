@@ -4258,3 +4258,7 @@ header[data-color-scheme="header"] .logo-image {
 .w-5\/4 {
   width: 125%;
 }
+
+.uppercase *::placeholder, .uppercase input {
+  text-transform: uppercase;
+}
