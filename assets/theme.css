@@ -4296,7 +4296,7 @@ header[data-color-scheme="header"] .logo-image {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .contact-submit:hover {
@@ -4331,6 +4331,16 @@ header[data-color-scheme="header"] .logo-image {
 .hover\:invert:hover {
   background-color: var(--color-scheme-text);
   color: var(--color-scheme-background);
+}
+
+.contact-submit:hover {
+  border-radius: unset;
+  border-image-width: 0;
+  outline: none;
+}
+
+.contact-submit {
+  outline: none;
 }
 
 .size-table tr th:first-child, .size-table tr td:first-child {

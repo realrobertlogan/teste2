@@ -33,7 +33,7 @@
         "speed": 150,
         "direction": "",
         "color_scheme": "septenary",
-        "is_border": true
+        "is_border": false
       }
     }
   },

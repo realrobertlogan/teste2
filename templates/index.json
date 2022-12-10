@@ -250,6 +250,7 @@
         "text_size": "text-xl",
         "font": "body",
         "text_position": "items-start",
+        "button_link": "",
         "color_scheme": "tertiary",
         "cta_link": "#",
         "cta_text": "read more",
@@ -291,6 +292,7 @@
         "text_size": "text-xl",
         "font": "body",
         "text_position": "items-start",
+        "button_link": "",
         "color_scheme": "secondary",
         "cta_link": "#",
         "cta_text": "read more",
@@ -322,7 +324,7 @@
         "speed": 150,
         "direction": "",
         "color_scheme": "quaternary",
-        "is_border": true
+        "is_border": false
       }
     }
   },

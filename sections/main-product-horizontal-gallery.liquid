@@ -522,7 +522,7 @@
         <ul id="splide-list" class="splide__list w-full {% if settings.fill_image_to_border_edge %}{% else %}lg:gap-4{% endif%}">
         {%- if featured_media != null -%}
           {%- assign media = featured_media -%}
-          <li data-first-media class="w-full splide__slide bg-scheme-background relative {%comment%}{% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}{%endcomment%}" data-index="0">
+          {% comment %} <li data-first-media class="w-full splide__slide bg-scheme-background relative {%comment%}{% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}{%endcomment%}" data-index="0">
             {%- render 'product-media_horizontal-gallery-template',
               media: media,
               image_index: image_index,
@@ -534,11 +534,11 @@
           </li>
           {%- if media.media_type == 'image' -%}
             {%- assign image_index = image_index | plus: 1 -%}
-          {%- endif -%}
+          {%- endif -%} {% endcomment %}
         {%- endif -%}
         {% for media in product.media %}
             {%- unless media.id == featured_media.id -%}
-            <li {% if featured_media == null and forloop.first %}data-first-media{% endif %} class="w-full splide__slide bg-scheme-background relative {%comment%}{% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}{%endcomment%}" data-index="{% if featured_media == null %}{{ forloop.index0 }}{% else %}{{ forloop.index }}{% endif %}">
+            <li {% if forloop.index == 2 %}data-first-media{% endif %} class="w-full splide__slide bg-scheme-background relative {%comment%}{% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}{%endcomment%}" data-index="{% if featured_media == null %}{{ forloop.index0 }}{% else %}{{ forloop.index }}{% endif %}">
               {%- render 'product-media_horizontal-gallery-template',
                 media: media,
                 image_index: image_index,

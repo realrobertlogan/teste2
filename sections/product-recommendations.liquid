@@ -27,7 +27,7 @@
     {% if recommendations.products_count > 0 %}
       <div class="product-recommendations" data-color-scheme="{{ section_color }}">
         <div class="product-recommendations-container border-t-grid border-grid-color">
-          <ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter z-10 border-b-grid border-scheme-text">
+          <ul class="grid grid-cols-2 {{ desktop_grid_class }} z-10">
             <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text pb-16 lg:pb-0 lg:border-r-grid lg:border-0 border-b-grid border-grid-color">
               {% if section.settings.product_recommendations_heading != '' %}
                 <div class="py-4 section-x-padding">
