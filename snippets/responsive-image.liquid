@@ -13,7 +13,7 @@
 -%}
 <div 
      data-image-id="{{ image_id }}"
-     class="responsive-image-wrapper relative overflow-hidden w-full my-0 mx-auto {{ wrapper_class }}"
+     class="responsive-image-wrapper relative overflow-hidden w-full my-0 mx-auto {{ wrapper_class }} {% if is_border %}border-grid border-grid-color{% endif %}"
      style="height: 0; padding-top: {{ 100 | divided_by: image.aspect_ratio }}%;"
      {{ wrapper_attributes }}>
   <img class="responsive-image block absolute top-0 left-0 w-full h-full lazyload {{ image_class }} transition-opacity duration-200 ease-in-out w-full max-w-full h-auto"

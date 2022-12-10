@@ -30,7 +30,7 @@
   endcase 
 -%}
 
-<section class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden border-t-grid border-grid-color">
+<section class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense overflow-hidden border-t-grid bg-scheme-text gap-gutter border-grid-color"  data-color-scheme="{{ section_color }}">
   <div class="order-1 lg:order-0 bg-scheme-background text-scheme-text {{ article_width_desktop }} h-full w-full lg:p-1/8" data-color-scheme="{{ article_background_color }}">
     {% comment %} <div class="relative min-h-full">
       {%- if section.settings.image != blank -%}
@@ -56,7 +56,8 @@
     <div class="group block h-full">
       {%- if section.settings.article.image != blank -%}
         <div class="full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-grid border-grid-color{% else %}pt-2 lg:pt-4 lg:px-4 section-x-padding{% endif %}">
-          <div class="relative">
+          <div class="relative border-grid border-scheme-text">
+            <a href="{{ section.settings.cta_link }}" class="increase-target"></a>
             {% render 'image-crop' with
               image: section.settings.article.image,
               ratio: 0
@@ -82,7 +83,7 @@
     </div>
   </div>
 
-  <div class="order-0 lg:order-1 {{ text_width_desktop }} section-x-padding bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-4 flex {{ text_position }} flex-col justify-between" data-color-scheme="{{ section_color }}">
+  <div class="order-0 lg:order-1 {{ text_width_desktop }} section-x-padding bg-scheme-background text-scheme-text relative lg\:px-4 px-4 py-4 flex {{ text_position }} flex-col justify-between">
     {% comment %} <div class="{{ text_align }} break-words w-full"> {% endcomment %}
     {%- if section.settings.subtitle != blank -%}
       <p class="font-heading {{ settings.secondary_heading_size }} featured">{{ section.settings.subtitle }}</p>
@@ -91,7 +92,7 @@
     <div class="text-center w-full my-32 lg:my-4">
       {%- assign title = section.settings.title | downcase %}
       {%- if title != blank -%}
-        <h2 class="font-heading text-8xl mb-4 {% if title == 'journal' %}journal-font lg:text-11xl{% else %} lg:text-8xl{% endif %}">{{ title }}</h2>
+        <h2 class="font-heading mb-4 {% if title == 'journal' %}journal-font lg:text-11xl text-10xl{% else %} lg:text-8xl text-8xl{% endif %}">{{ title }}</h2>
       {%- endif -%}
 
       {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
@@ -101,10 +102,10 @@
             {%- render 'link-underline',
               section_color: section_color,
               text: section.settings.cta_text,
-              link: section.settings.cta_link
+              link: section.settings.button_link
             -%}
           {%- when 'button' -%}
-            <a href="{{ section.settings.cta_link }}" class="px-8 py-2 rounded-full border-text border-scheme-text inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
+            <a href="{{ section.settings.button_link }}" class="px-8 py-2 rounded-full border-text border-scheme-text inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
               <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
             </a>
           {%- endcase -%}
@@ -246,6 +247,11 @@
         { "value": "items-end", "label": "Right"}
       ],
       "default":   "items-center"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
     {
       "type": "select",

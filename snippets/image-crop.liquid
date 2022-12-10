@@ -3,10 +3,11 @@ Displays a cropped image if a ratio is passed, or an uncropped one if crop == 'n
 {% endcomment %}
 {%- if crop == 'none' or ratio == 0 -%}
   {% render 'responsive-image' with
-    image: image
+    image: image,
+    is_border: is_border
   %}
 {%- else -%}
-  <div class="gallery-image-cropped relative w-full"
+  <div class="gallery-image-cropped relative w-full {% if is_border %}border-grid border-grid-color{% endif %}"
     style="padding-top:{{ 1 | divided_by: ratio | times: 100 }}%;">
     <div
       class="lazyload gallery-image-cropped__inner absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center"

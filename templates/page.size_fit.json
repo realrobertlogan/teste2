@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-size_fit",
+      "blocks": {
+        "f32e76e5-fda3-48dc-91f9-1fc40295faa6": {
+          "type": "text",
+          "settings": {
+            "heading": "SIZE CONVERSION",
+            "content": "<p>If you have a hat that fits you well, check the sizing on the tag. Then, using our size conversion chart below, simply convert this size to a measurement on the table. This will help you determine the perfect size of your new Lack of Color Hat.<\/p>"
+          }
+        },
+        "4786681f-65e5-4d6e-b360-121d5c79b17c": {
+          "type": "text",
+          "settings": {
+            "heading": "How to measure",
+            "content": "<p>Each Lack of Color piece is thoughtfully designed so each shape and silhouette will vary slightly in how it fits.<br\/><br\/>Use our size guide as well as the size and fit section of your desired hat to find your perfect fit.<\/p>"
+          }
+        },
+        "19c53835-345a-4177-a98c-785349fd060c": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "content": ""
+          }
+        },
+        "f53cb84e-f4e7-4494-b2a8-cd22aebdc52b": {
+          "type": "text",
+          "settings": {
+            "heading": "How to find your hat size",
+            "content": "<p>We have a few simple tips to help you find the perfect sized hat for you. To measure your head accurately, you will need a cloth measuring tape. We also recommend you have assistance from another person, to ensure accuracy.<br\/><br\/>All Lack of Color hats are size<\/p>"
+          }
+        },
+        "a5fcd210-1adf-43d3-86a5-ee66ffedcc26": {
+          "type": "text",
+          "settings": {
+            "heading": "Lack of Color Sizing",
+            "content": "<p>(MINI) 47 CM<br\/>Recommended for children and small bubs alike, this is our newest children’s mini size for those aged 1-5 years.<br\/><br\/>(KIDS) 53 CM<br\/>Our children’s size fits just right for your tiny adventurer in the making. But don’t forget – this size is only recommended for children. Each of these hats are scaled down and purposefully designed for your mini.<br\/><br\/>S \/ 55 CM<br\/>Our smallest size on offer. If your head measures 53 cm – 54 cm, we recommend adding a hat filler to your order, as these reduce the size of your hat by 1-2.5 cm.<br\/><br\/>M \/ 57 CM<br\/>Ideal for the average sized head. We recommend this medium size as a ‘standard’ or ‘average’ fit.<br\/><br\/>L \/ 59 CM<br\/>If you have a large head – we recommend our standard size large. It’s a no brainer.<br\/><br\/>XL \/ 61 CM<br\/>Available in most styles and sold exclusively online, our extra-large size is here to save the day. <br\/><br\/>XXL \/ 63 CM<br\/>As the largest size we currently offer, our XXL is only available in selected styles and is sold exclusively online. <\/p>"
+          }
+        },
+        "be109761-6f93-4f87-9751-3556a879d421": {
+          "type": "text",
+          "settings": {
+            "heading": "How to find your fit",
+            "content": "<p>How would you like to wear your hat? Select from the options below. Then, follow the instructions of your preferred option to measure your head.<br\/><br\/>Be sure to follow the instructions of your preferred option, there are significant differences between them.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f32e76e5-fda3-48dc-91f9-1fc40295faa6",
+        "4786681f-65e5-4d6e-b360-121d5c79b17c",
+        "19c53835-345a-4177-a98c-785349fd060c",
+        "f53cb84e-f4e7-4494-b2a8-cd22aebdc52b",
+        "a5fcd210-1adf-43d3-86a5-ee66ffedcc26",
+        "be109761-6f93-4f87-9751-3556a879d421"
+      ],
+      "settings": {
+        "color_scheme": "quinary",
+        "override_header_footer_color_scheme": true
+      }
+    },
+    "8fc0b83a-c748-424b-816f-97cb825c7813": {
+      "type": "marquee",
+      "settings": {
+        "text": "Ziggi Zuver is committed to sustainable practices with a conscious approach to designing, making, collaborating and distributing.  Ge.LABEL is committed to su",
+        "repeat_text": true,
+        "link": "",
+        "text_size": "text-2xl lg:text-3xl",
+        "font": "heading",
+        "speed": 150,
+        "direction": "",
+        "color_scheme": "secondary",
+        "is_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8fc0b83a-c748-424b-816f-97cb825c7813"
+  ]
+}

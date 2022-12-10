@@ -13,8 +13,8 @@
       {% for block in section.blocks %}
         {% assign modulo = forloop.index | modulo: 2 %}
         {% if modulo == 1 %}
-          <div class="p-8 section-x-padding">
-            <p class="featured-sm pb-8">
+          <div class="py-4 section-x-padding">
+            <p class="featured-sm pb-8 uppercase">
               {{ block.settings.heading }}
             </p>
             {{ block.settings.content }}
@@ -26,8 +26,8 @@
       {% for block in section.blocks %}
         {% assign modulo = forloop.index | modulo: 2 %}
         {% if modulo == 0 %}
-          <div class="p-8 section-x-padding">
-            <p class="featured-sm pb-8">
+          <div class="py-4 section-x-padding">
+            <p class="featured-sm pb-8 uppercase">
               {{ block.settings.heading }}
             </p>
             {{ block.settings.content }}

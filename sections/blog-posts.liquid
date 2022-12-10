@@ -40,7 +40,7 @@
   </div>
 {%- endcapture -%}
 
-<section class="bg-scheme-background text-scheme-text border-t-grid border-grid-color" data-color-scheme="{{ section_color }}">
+<section class="bg-scheme-background text-scheme-text lg:border-t-grid border-grid-color" data-color-scheme="{{ section_color }}">
 
   {% if section.settings.title != '' %}
     {%- assign post_heading_level = 'h3' -%}
@@ -52,15 +52,15 @@
       section_color: section_color
     -%}
   {% endif %}
-  <ol class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+  <ol class="grid grid-cols-1 lg:grid-cols-12 gap-gutter bg-scheme-text">
     {% for article in blog.articles limit: section.settings.post_limit %}
       {%- assign counter = counter | plus: 1 -%}
       <li class="{{ desktop_col_span }} relative bg-scheme-background text-scheme-text lg:p-1/8">
         <div class="group block h-full">
           {%- if section.settings.blog_show_images -%}
             {%- if article.image != blank -%}
-              <div class="full-h bg-scheme-background border-grid border-grid-color{% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}{%comment%}pt-2 px-2 lg:pt-4 lg:px-4{%endcomment%}{% endif %}">
-                <div class="relative">
+              <div class="full-h bg-scheme-background p-2 {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}{%comment%}pt-2 px-2 lg:pt-4 lg:px-4{%endcomment%}{% endif %}">
+                <div class="relative border-grid border-grid-color">
                   {% render 'image-crop' with
                     image: article.image,
                     ratio: ratio

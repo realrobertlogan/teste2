@@ -32,7 +32,7 @@
     {%- endif -%}
   {%- endfor -%}
 
-  <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color">
+  <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense border-grid-color">
     <div class="lg:col-start-1 lg:col-end-7 bg-scheme-background">
       <div class="full-h bg-scheme-background {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% else %}pt-2 pb-2 lg:py-4 lg:px-4 px-8 lg:px-4{% endif %}">
         <div class="relative">
@@ -44,8 +44,8 @@
       </div>
     </div>
     <div class="grid lg:grid-cols-12 lg:col-start-7 lg:col-end-13 gap-gutter bg-border grid-flow-row-dense">
-      <div class="lg:col-start-1 lg:col-end-9 bg-scheme-background text-scheme-text h-full section-x-padding border-b-grid border-grid-color">
-        <div class="py-theme product-block-area h-full flex justify-between flex-col">
+      <div class="lg:col-start-1 lg:col-end-9 bg-scheme-background text-scheme-text h-full section-x-padding">
+        <div class="py-theme pt-4 product-block-area h-full flex justify-between flex-col">
           <div class="lg:pt-theme-quadruple">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
           {%- assign tab_counter = 0 -%}
@@ -411,7 +411,7 @@
           </div>
         </div>
       </div>
-      <div class="product-description flex items-end border-b-grid border-grid-color {% if no_social_blocks %}lg:col-start-9{% else %}lg:col-start-9{% endif %} lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding py-theme product-block-area">
+      <div class="product-description flex items-end {% if no_social_blocks %}lg:col-start-9{% else %}lg:col-start-9{% endif %} lg:col-end-13 bg-scheme-background text-scheme-text h-full section-x-padding py-4 product-block-area">
         {%- assign tab_counter = 0 -%}
         {%- for block in section.blocks -%}
           {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' or block.type == 'complementary' -%}
@@ -513,7 +513,7 @@
     </div>
   </div>
 
-  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group data-color-scheme="quaternary">
+  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-scheme-background text-scheme-text {% unless settings.fill_image_to_border_edge %}border-grid-color lg:border-0{% endunless %}" data-product-single-media-group data-color-scheme="quaternary">
     <div class="featured absolute left-4 top-4 text-2xl inline-block">
       Gallery
     </div>

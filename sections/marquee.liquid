@@ -9,7 +9,7 @@
   assign repeat_text = section.settings.repeat_text 
 %}
 
-<section {% if section.settings.is_border %}class="border-t-grid border-grid-color"{% endif %}>
+<section>
   {% render 'marquee' with
     id: section.id
     text_size_class: text_size_class,
@@ -115,7 +115,8 @@
             { "value": "primary", "label": "Primary"},
             { "value": "secondary", "label": "Secondary"},
             { "value": "tertiary", "label": "Tertiary"},
-            { "value": "quaternary", "label": "Quaternary"}
+            { "value": "quaternary", "label": "Quaternary"},
+            { "value": "septenary", "label": "Septenary"}
         ],
         "default":   "secondary"
       },

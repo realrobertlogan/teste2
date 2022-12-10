@@ -321,7 +321,7 @@
         "font": "heading",
         "speed": 150,
         "direction": "",
-        "color_scheme": "tertiary",
+        "color_scheme": "quaternary",
         "is_border": true
       }
     }

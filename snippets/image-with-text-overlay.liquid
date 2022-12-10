@@ -1,5 +1,6 @@
 <div class="{% unless is_slider %}bg-scheme-background border-t-grid border-grid-color{% endunless %} relative overflow-hidden {% if height == 'full_screen' %}h-screen-header{% elsif height == 'full_height' %}h-full{% else %}h-auto{% endif %} {% if stack_mobile == 'stack' %}flex flex-col-reverse{% endif %}" data-color-scheme="{{ background }}">
   <div class="image__wrapper {%comment%}{% unless settings.fill_image_to_border_edge or indent_image %}p-2 lg:p-4 {% endunless %}{%endcomment%} {% if indent_image %}{% if is_slider %}p-1/4 lg:p-1/3 {% else %}p-8 lg:p-16 {% endif %}{% endif %} h-full w-full">
+    <a href="{{ cta_link }}" class="increase-target"></a>
     <div class="{% if settings.fill_image_to_border_edge == false or height == 'full_screen' or height == 'full_height' %}relative h-full w-full{% endif %}">
     {% if image != blank %}
       {% if image_mobile != blank %}

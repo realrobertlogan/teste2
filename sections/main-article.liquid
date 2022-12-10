@@ -110,7 +110,8 @@
         {% render 'image-crop' with
           image: article.image,
           ratio: ratio,
-          crop: section.settings.crop
+          crop: section.settings.crop,
+          is_border: true
         %}
       </div>
     {%- endif -%}
@@ -123,7 +124,7 @@
             </p>
           {%- endif -%}
 
-          <h2 class="font-heading {{ settings.base_heading_size }} text-3xl break-words">{{ article.title }}</h2>
+          <h2 class="font-heading {{ settings.base_heading_size }} text-3xl break-words mt-2">{{ article.title }}</h2>
         </div>
         {% comment %} 
         {%- if show_author -%}
@@ -138,7 +139,7 @@
           {%- endif -%}
         </div>
 
-        <div class="rte mt-4 text-2xl">
+        <div class="rte mt-4 text-xl">
           {%- if article.excerpt.size > 0 %}
             {{ article.excerpt }}
           {%- else -%}
@@ -171,9 +172,9 @@
     </div>
   </div>
 
-  <div class="rte my-6 section-x-padding">
+  {% comment %} <div class="rte my-6 section-x-padding">
     {{ article.content }}
-  </div>
+  </div> {% endcomment %}
 
   {% comment %} <div class="grid grid-cols-1 lg:grid-cols-12  bg-border gap-gutter">
     {%- if article.image != blank -%}

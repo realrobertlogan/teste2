@@ -13,11 +13,11 @@
 %}
 
 {% paginate blog.articles by section.settings.no_posts %}
-<section class="bg-scheme-background text-scheme-text blog border-t-grid border-grid-color" data-color-scheme="{{ section_color }}">
+<section class="bg-scheme-background text-scheme-text blog" data-color-scheme="{{ section_color }}">
 
   {%- if show_title -%}
-  <div class="bg-scheme-background text-scheme-text section-x-padding pt-theme-double pb-theme  border-b-grid border-grid-color">
-    <h1 class="text-center {% if blog.handle == 'journal' %}journal-font lg:text-7xl{% endif %} font-heading {{ settings.template_heading_size }} {% if settings.section_title_align == 'center' %}text-center{% endif %}">
+  <div class="bg-scheme-background text-scheme-text section-x-padding {% if blog.handle == 'journal' %}pt-theme-double pb-theme-double {% else %} pb-theme-quadruple pt-4 {% endif %}border-b-grid border-scheme-text">
+    <h1 class="{% if blog.handle == 'journal' %}text-center journal-font lg:text-11xl text-8xl{% else %} font-heading text-2xl lg:text-6xl {% endif %}{% if settings.section_title_align == 'center' %}text-center{% endif %}">
       {{ blog.title }}
       {% if show_rss %}
       <a href="{{ shop.url }}{{ blog.url }}.atom">
@@ -98,13 +98,14 @@
         -%}
         
 
-        <li class="relative grid lg:grid-cols-12 grid-flow-row-dense lg:bg-border gap-gutter overflow-hidden {% unless forloop.first %}border-t-grid border-grid-color{% endunless %}">
+        <li class="relative grid lg:grid-cols-12 grid-flow-row-dense lg:bg-text gap-gutter overflow-hidden {% unless forloop.first %}border-t-grid border-scheme-text{% endunless %}">
           {%- if article.image != blank -%}
-            <div class="order-1 {{ image_width_desktop }} relative full-h bg-scheme-background {% unless settings.fill_image_to_border_edge %}lg:p-1/8 flex items-center{% endunless %}">
+            <div class="order-1 {{ image_width_desktop }} relative full-h bg-scheme-background {% unless settings.fill_image_to_border_edge %}lg:p-1/8 p-1/8 flex items-center{% endunless %}">
               {% render 'image-crop' with
                 image: article.image,
                 ratio: ratio,
-                crop: section.settings.crop
+                crop: section.settings.crop,
+                is_border: true
               %}
             </div>
           {%- endif -%}
@@ -117,7 +118,7 @@
                   </p>
                 {%- endif -%}
 
-                <h2 class="font-heading {{ settings.base_heading_size }}  break-words">{{ article.title }}</h2>
+                <h2 class="font-heading text-2xl lg:text-4xl break-words mt-2">{{ article.title }}</h2>
               </div>
               {% comment %} 
               {%- if show_author -%}
@@ -125,6 +126,9 @@
               {%- endif -%} {% endcomment %}
             
               <div class="text-center p-1/5 lg:p-4">
+                {% if article.metafields.custom.featured_title %}
+                  <h2 class="font-heading text-2xl {% if article.metafields.custom.featured_title == 'Mixtape' %}lg:text-11xl journal-font{% else %} lg:text-6xl{% endif %} break-words">{{ article.metafields.custom.featured_title }}</h2>
+                {% endif %}
                 {% if show_link %}
                   <a class="border-scheme-accent border-grid py-4 px-12 hover:text-scheme-accent text-base align-top inline-flex items-center justify-center {% if settings.links_show_underline %}border-b-text border-scheme-text hover:border-scheme-accent pb-1{% endif %}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}" href="{{ article.url }}" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
                       <span class="{% if settings.links_uppercase %}uppercase{% endif %}">{{ 'blogs.article.read_more' | t }} {% if settings.links_show_arrow %}&rarr;{% endif %}</span>
@@ -133,7 +137,7 @@
               </div>
 
               {%- if show_excerpt -%}
-                <div class="rte mt-4">
+                <div class="rte mt-4 text-xl">
                   {%- if article.excerpt.size > 0 %}
                     {{ article.excerpt }}
                   {%- else -%}
@@ -205,7 +209,7 @@
                 {%- endif -%}
 
                 {%- if show_excerpt -%}
-                  <div class="rte mt-4">
+                  <div class="rte mt-4 text-xl">
                     {%- if article.excerpt.size > 0 %}
                       {{ article.excerpt }}
                     {%- else -%}

@@ -67,7 +67,7 @@
     aria-modal="true"
     data-menu-drawer>
     <div class="js-enabled top-0 relative flex items-center justify-start py-4 section-x-padding bg-scheme-background {% unless show_borders %}border-b-grid border-grid-color{% endunless %}">
-      <button @click.prevent="$store.drawer.menuDrawerOpen = false" class="block h-5 top-0 capitalize">
+      <button @click.prevent="$store.drawer.menuDrawerOpen = false" class="text-lg block h-5 top-0 capitalize">
         <span class="visually-hidden">{{ 'general.accessibility.close_modal' | t }}</span>
         {% comment %} {% render 'icon-close' %} {% endcomment %}close
       </button>
@@ -77,7 +77,7 @@
       <ul>
         {%- for link in linklists[section.settings.menu].links -%}
           {%- capture link_class -%}inline-block py-4 w-full {{ section.settings.text_size }}{%- endcapture -%}
-          <li class="no-js-focus-wrapper relative px-8 {% if show_borders %}border-t-grid border-grid-color{% endif %}">
+          <li class="no-js-focus-wrapper relative px-10 {% if show_borders %}border-t-grid border-grid-color{% endif %}">
             {%- if link.links != blank -%}
               {%- capture child_link_class -%}inline-block py-1{%- endcapture -%}
               <button data-accordion

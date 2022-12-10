@@ -23,6 +23,8 @@
     "color_senary_text": "#ddff55",
     "color_senary_background": "#9d9d9d",
     "color_senary_accent": "#ddff55",
+    "color_septenary_text": "#ffffff",
+    "color_septenary_background": "#030303",
     "color_quiz1_text": "#000000",
     "color_quiz1_background": "#ff70e8",
     "color_quiz2_text": "#000000",
@@ -143,11 +145,19 @@
               "main_linklist": "footer",
               "show_heading": true
             }
+          },
+          "589860ef-3267-4cc6-949e-8eb0e5109535": {
+            "type": "menu",
+            "settings": {
+              "main_linklist": "social",
+              "show_heading": true
+            }
           }
         },
         "block_order": [
           "eb1dbd88-faad-451d-a656-319121b5e6e9",
-          "61f6da74-bcf2-4d94-ba46-efd4d0c42f9a"
+          "61f6da74-bcf2-4d94-ba46-efd4d0c42f9a",
+          "589860ef-3267-4cc6-949e-8eb0e5109535"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Group_3.png",
@@ -157,7 +167,7 @@
           "show_country_selector": true,
           "text_heading": "",
           "text_text": "",
-          "show_social": true,
+          "show_social": false,
           "social_title": "",
           "show_newsletter": false,
           "newsletter_section_title": "",

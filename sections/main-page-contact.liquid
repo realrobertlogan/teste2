@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-theme bg-border border-t-grid border-b-grid border-grid-color">    
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-theme bg-border border-t-grid border-grid-color">    
     <div class="relative min-h-full">
       {%- if section.settings.image != blank -%}
         {%- assign image = section.settings.image -%}
@@ -80,7 +80,7 @@
           {%- endif -%}
         </textarea>
 
-        <input type="submit" class="contact-submit cursor-pointer text-left section-x-padding py-4 w-full {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} border-none" value="{{ 'contact.form.submit' | t }}">
+        <input type="submit" class="contact-submit cursor-pointer text-left section-x-padding py-4 w-full {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} border-none hover:invert" value="{{ 'contact.form.submit' | t }}">
       {% endform %}
     </div>
   </div>

@@ -58,13 +58,13 @@
       section_id: section.id
     %}
   {% endif %}
-  <div class="border-t-grid border-grid-color">
+  <div class="">
     <div class="grid {{ desktop_grid_class }} bg-border {% if show_grid_border %}gap-gutter{% endif %%}">
 
       {% comment %}
       Footer logo
       {% endcomment %}
-      <div class="{{ desktop_col_span }} section-x-padding py-theme bg-scheme-background text-scheme-text">
+      <div class="{{ desktop_col_span }} section-x-padding py-4 bg-scheme-background text-scheme-text">
         <div class="h1">
           <a href="{{ routes.root_url }}" class="footer-logo-image break-words fill-scheme-text">
             {% render 'logo' %}
@@ -80,7 +80,7 @@
         </div>
       </div>
       {% if section.settings.text_text != blank %}
-        <div class="{{ desktop_col_span }} section-x-padding py-theme bg-scheme-background text-scheme-text overflow-hidden">
+        <div class="{{ desktop_col_span }} section-x-padding py-4 bg-scheme-background text-scheme-text overflow-hidden">
           {% if section.settings.text_heading != '' %}
             <h2 class="font-heading text-base mb-4 break-words">{{ section.settings.text_heading }}</h2>
           {% endif %}
@@ -92,7 +92,7 @@
 
       {% for block in section.blocks %}
         {% if block.type == 'menu' %}
-          <div class="{{ desktop_col_span }} section-x-padding py-theme bg-scheme-background text-scheme-text {% unless show_grid_border %}lg:text-right{% endunless %}"  {{ block.shopify_attributes }}>
+          <div class="{{ desktop_col_span }} section-x-padding py-4 bg-scheme-background text-scheme-text {% unless show_grid_border %}lg:text-right{% endunless %}"  {{ block.shopify_attributes }}>
             <div class="text-left inline-block">
             {% assign link_list = block.settings.main_linklist %}
             {% if block.settings.show_heading %}
@@ -101,7 +101,7 @@
             <ul class="list-none space-y-1">
               {% for link in linklists[link_list].links %}
                 <li class="text-lg">
-                  <a href="{{ link.url }}">
+                  <a href="{{ link.url }}" {% if linklists[link_list].title == 'Social' %}target="_blank"{% endif %}>
                     {{ link.title }}
                   </a>
                 </li>
@@ -114,7 +114,7 @@
 
       {% if section.settings.show_social %}
         {% assign social_style = settings.social_style %}
-        <div class="{{ desktop_col_span }} section-x-padding py-theme bg-scheme-background text-scheme-text {% unless show_grid_border %}lg:text-right{% endunless %}">
+        <div class="{{ desktop_col_span }} section-x-padding py-4 bg-scheme-background text-scheme-text {% unless show_grid_border %}lg:text-right{% endunless %}">
           <div class="text-left inline-block">
             {%- if section.settings.social_title != blank %}
               <h2 class="font-heading text-base mb-4">{{ section.settings.social_title }}</h2>

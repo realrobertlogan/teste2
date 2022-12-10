@@ -230,7 +230,7 @@
 {%- endcapture -%}
 
 {%- capture header_menu_toggle -%}
-  <button class="js-enabled inline-block py-2 {% if settings.header_uppercase %}uppercase{% endif %}"
+  <button class="text-lg js-enabled inline-block py-2 {% if settings.header_uppercase %}uppercase{% endif %}"
           x-bind:aria-expanded="$store.drawer.menuDrawerOpen"
           @click="$store.drawer.menuDrawerOpen = !$store.drawer.menuDrawerOpen"
           data-menu-drawer-toggle>
@@ -275,7 +275,7 @@
 {% endcomment %}
 {%- capture header_cart %}
   <a  href="{{ routes.cart_url }}"
-      class="inline-block py-2 flex {% if settings.header_uppercase %}uppercase{% endif %}{% if layout contains 'spread'%} h-full{% endif %}"
+      class="text-lg inline-block py-2 flex {% if settings.header_uppercase %}uppercase{% endif %}{% if layout contains 'spread'%} h-full{% endif %}"
       {% if settings.ajax_cart_method == 'drawer' %}
         data-cart-drawer-toggle
         x-bind:aria-expanded="$store.drawer.cartDrawerOpen"

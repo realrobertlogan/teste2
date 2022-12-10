@@ -116,7 +116,7 @@
 </section>
 {%- endif -%}
 {% paginate collection.products by product_limit %}
-  <section id="main-collection-product-grid" data-id="{{ section.id }}" class="bg-scheme-background text-scheme-text collection border-t-grid border-theme-color transition-opacity duration-200 ease-in-out" data-section-type="collection" data-section-id="{{ section.id }}" x-data="ThemeSection_collection()" x-init="mounted()" data-color-scheme="{{ section_color }}">
+  <section id="main-collection-product-grid" data-id="{{ section.id }}" class="bg-scheme-background text-scheme-text collection border-theme-color transition-opacity duration-200 ease-in-out" data-section-type="collection" data-section-id="{{ section.id }}" x-data="ThemeSection_collection()" x-init="mounted()" data-color-scheme="{{ section_color }}">
     {%- if show_heading_container -%}
     <div class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense bg-border gap-gutter overflow-hidden border-b-grid border-theme-color">
       {% if show_image and collection.image %}

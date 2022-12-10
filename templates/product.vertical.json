@@ -1,7 +1,7 @@
 {
   "sections": {
-    "main-product-horizontal-gallery": {
-      "type": "main-product-horizontal-gallery",
+    "main": {
+      "type": "main-product",
       "blocks": {
         "title": {
           "type": "title",
@@ -28,44 +28,31 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "enable_payment_button": false,
+            "enable_payment_button": true,
             "show_pickup_availability": true
           }
         },
         "description": {
           "type": "description",
           "settings": {
-            "enable_collapsible_tabs": false,
+            "enable_collapsible_tabs": true,
             "truncate_description": false
           }
         },
-        "d1b3a1f7-ea69-4134-aa60-29ed54804045": {
+        "6377afc3-8294-4e17-af4c-758cb9af8358": {
           "type": "collapsible_tab",
           "settings": {
-            "position": "product_form",
-            "heading": "Materials",
+            "heading": "Collapsible tab",
             "heading_text_style": "body",
             "content": "",
             "page": "",
-            "icon": "none"
+            "icon": "box"
           }
         },
-        "7fcf4c7f-1ad4-44ea-bc2b-5aa6ed991028": {
+        "104cf1c0-fa53-4f69-a012-af7edc4f58b9": {
           "type": "collapsible_tab",
           "settings": {
-            "position": "product_form",
-            "heading": "Description",
-            "heading_text_style": "body",
-            "content": "",
-            "page": "",
-            "icon": "none"
-          }
-        },
-        "fd4686d5-f389-4efb-a716-9714af83b436": {
-          "type": "collapsible_tab",
-          "settings": {
-            "position": "product_form",
-            "heading": "Sizing",
+            "heading": "Collapsible tab",
             "heading_text_style": "body",
             "content": "",
             "page": "",
@@ -80,14 +67,15 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "d1b3a1f7-ea69-4134-aa60-29ed54804045",
-        "7fcf4c7f-1ad4-44ea-bc2b-5aa6ed991028",
-        "fd4686d5-f389-4efb-a716-9714af83b436"
+        "6377afc3-8294-4e17-af4c-758cb9af8358",
+        "104cf1c0-fa53-4f69-a012-af7edc4f58b9"
       ],
       "settings": {
-        "desktop_image_height": 70,
+        "desktop_image_width": "one-half",
+        "desktop_image_position": "left",
+        "two_images_per_row": false,
+        "first_image_full_width": false,
         "variant_image_behaviour": "swap",
-        "app_block_area": "product_form",
         "enable_image_zoom": false,
         "enable_video_looping": false,
         "color_scheme": "primary",
@@ -98,7 +86,7 @@
       "type": "product-recommendations",
       "settings": {
         "show_product_recommendations": true,
-        "product_recommendations_heading": "Also",
+        "product_recommendations_heading": "You may also like",
         "limit": "3",
         "products_per_row_desktop": "4",
         "products_per_row_mobile": "1",
@@ -108,20 +96,19 @@
     "marquee": {
       "type": "marquee",
       "settings": {
-        "text": "Ziggi Zuver is committed to sustainable practices with a conscious approach to designing, making, collaborating and distributing.  Ge.LABEL is committed to su",
+        "text": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.",
         "repeat_text": true,
         "link": "",
         "text_size": "text-2xl lg:text-3xl",
         "font": "heading",
         "speed": 150,
         "direction": "",
-        "color_scheme": "secondary",
-        "is_border": false
+        "color_scheme": "secondary"
       }
     }
   },
   "order": [
-    "main-product-horizontal-gallery",
+    "main",
     "product-recommendations",
     "marquee"
   ]
